@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home-landingPage/home.component';
+import { HomeComponent } from './pages/cardiotech/home.component';
 
 const routes: Routes = [
   {
