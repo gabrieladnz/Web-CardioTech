@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root{
+
+    /* ============ Color neutral ============ */
+    --color-neutral-10: #FFFF;
+    --color-neutral-20: #F6F6F6;
+    --color-neutral-30: #D9D9D9;
+    --color-neutral-40: #0000;
+
+    /* ============ Main colors ============ */
+    --color-light-orange: #FAF2EF;
+    --color-orange: #F28B30;
+    --color-strong-orange: #F27052;
+    --color-red: #D82727;
+
+    /* ============ Colors feedbacks ============ */
+    --color-accept: #30A308;
+    --color-light-accpet: #BEFFA7;
+    --color-error: #DB0000;
+    --color-light-error: #FE9696;
+    --color-yellow: #F2C84B;
+    --color-light-yellow: #FFE28C;
+}
