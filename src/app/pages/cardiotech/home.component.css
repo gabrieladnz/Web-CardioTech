@@ -1,7 +1,7 @@
 
 .intro-container{
     display: flex;
-    margin: 10% 5%;
+    margin: 5% 5%;
 }
 
 .intro-content{
@@ -9,7 +9,7 @@
    
 }
 
-/* HOME - TEXT AREA */
+/* =================== HOME - TEXT AREA =================== */
 
 .text-area{
     margin: 5% 0 0 0;
@@ -342,6 +342,23 @@
 }
 
 
+.btn{
+    overflow: hidden;
+    position: relative;
+    transition: .5s ease-in;
+}
+
+.btn::before{
+    background: var(--color-light-orange-20);
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    transition: .8s ease-in;
+    width: 100%;
+    z-index: -1;
+}
+
 .btn-register{
     border: 2px var(--color-strong-orange) solid;
     border-radius: 5px;
@@ -350,23 +367,63 @@
     font-size: 18px;
     padding: 20px 8px;
     text-align: center;
-    transition: .5s ease-in;
+    z-index: 0;
+}
+
+.btn-register::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
 }
 
 .btn-register:hover{
-    background: var(--color-light-orange-20);
-    transform: translateY(-5px);
+    color: var(--color-neutral-40);
+    transform: translateY(-5px); 
+}
+
+.btn-register:hover::before{
+    height: 180%;
 }
 
 
 .bpm-2{
-    position: absolute;
     bottom: 0;
+    position: absolute;
     right: 0;
 }
 
+/* =================== SCROLLTOP AREA =================== */
 
+.scroll-top {
+    background: var(--color-light-orange-20);
+    border-radius: 50%;
+    bottom: 50px;
+    cursor: pointer;
+    color: var(--color-neutral-40);
+    display: inline-block;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    transition: .5s ease;
+  }
 
+  .scroll-top::before{
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  .scroll-top::after{
+    opacity: 1;
+  }
+ 
+  .scroll-top:hover{
+    background: #fde0da;
+    color: var(--color-red);
+    transform: translateY(-2px);
+  }
+
+  .ecg-icon{
+    padding: 8px;
+  }
 
 
 /* =================== RESPONSIVE AREA =================== */
