@@ -7,13 +7,17 @@
     --color-neutral-10: #FFFF;
     --color-neutral-20: #F6F6F6;
     --color-neutral-30: #D9D9D9;
-    --color-neutral-40: #0000;
+    --color-subtitle: #8888;
+    --color-neutral-40: black;
 
     /* ============ Main colors ============ */
     --color-light-orange: #FAF2EF;
+    --color-light-orange-20: #FFD1C7;
     --color-orange: #F28B30;
     --color-strong-orange: #F27052;
+    --color-border: #EAB289;
     --color-red: #D82727;
+    
 
     /* ============ Colors feedbacks ============ */
     --color-accept: #30A308;
@@ -22,4 +26,17 @@
     --color-light-error: #FE9696;
     --color-yellow: #F2C84B;
     --color-light-yellow: #FFE28C;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+li, a{
+    text-decoration: none;
+    list-style: none;
 }
