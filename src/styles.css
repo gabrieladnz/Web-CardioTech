@@ -28,6 +28,10 @@
     --color-light-yellow: #FFE28C;
 }
 
+::selection{
+    background: var(--color-light-orange);
+}
+
 *{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;;

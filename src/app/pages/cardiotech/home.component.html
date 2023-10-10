@@ -23,14 +23,14 @@
     
             </div>
 
-            <div class="home-img">
+            <div class="home-img fade-up">
                 <img  class="medica-img" src="../../../assets/img/Group 8.png" alt="">
             </div>
         </div>
     </section>
 
     <!--  =================== CARDS ===================  -->
-    <section class="cards-section">
+    <section class="cards-section fade-down">
         <div class="cards-container">
 
             <!--  =================== CARD 1 ===================  -->
@@ -101,7 +101,7 @@
 
             <div class="pulse-area">
                
-                <div class="img-area">
+                <div class="img-area fade-up">
                     <img src="../../../assets/img/Pulse-tablet.png" alt="" class="pulse-img">
                 </div>
 
@@ -197,7 +197,7 @@
                         </strong></h5>
                     </div>
 
-                    <a class="btn-register">Associe-se a Pulse</a>
+                    <a class="btn btn-register fade-up">Associe-se a Pulse</a>
                 </div>
             </div>
 
@@ -212,5 +212,6 @@
 <app-footer></app-footer>
 
 
-
-
+<a class="scroll-top" *ngIf="isScroll" (click)="scrollTop()">
+    <span class="material-symbols-outlined ecg-icon">keyboard_arrow_up</span>
+</a>
