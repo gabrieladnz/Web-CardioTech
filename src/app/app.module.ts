@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './pages/login/login.module';
+// import { AosModule } from 'ngx-aos';
+import * as Aos from 'aos';
+
 
 
 
@@ -18,10 +21,15 @@ import { LoginModule } from './pages/login/login.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    LoginModule
-   
+    LoginModule,
+    // AosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+  ngOnInit(){
+   Aos.init();
+  }
+}
