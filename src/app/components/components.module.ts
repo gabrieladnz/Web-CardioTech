@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NavbarPainelComponent } from './navbar-painel/navbar-painel.component';
 import { SidebarPainelComponent } from './sidebar-painel/sidebar-painel.component';
 import { ModalIAComponent } from './modal-ia/modal-ia.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarModule } from './navbar/navbar.module';
+import { FooterModule } from './footer/footer.module';
 
 
 
@@ -17,6 +20,10 @@ import { ModalIAComponent } from './modal-ia/modal-ia.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    NavbarModule,
+    FooterModule
   ]
 })
 export class ComponentsModule { }

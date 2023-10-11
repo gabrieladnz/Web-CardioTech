@@ -18,10 +18,11 @@ import { LoginModule } from './pages/login/login.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    LoginModule
-   
+    LoginModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

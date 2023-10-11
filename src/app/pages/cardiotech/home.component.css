@@ -1,0 +1,570 @@
+
+.intro-container{
+    display: flex;
+    margin: 5% 5%;
+}
+
+.intro-content{
+    display: flex;
+   
+}
+
+/* =================== HOME - TEXT AREA =================== */
+
+.text-area{
+    margin: 5% 0 0 0;
+    position: relative;
+}
+
+.title{
+    font-weight: bold;
+    margin: 0 5% 0 0;
+}
+
+.subtitle-area{
+    margin: 8% 5% 0 0;
+
+}
+
+.line-1:after,
+.line-2:after,
+.line-3:after{
+    background: var(--color-strong-orange);
+    bottom: 28px;
+    content: "";
+    font-weight: bold;
+    height: 3px;
+    left: 5px;
+    position: absolute;
+    transition: 0.6s;
+    width: 18%;
+}
+
+.line-2:after{
+    bottom: 28px;
+    height: 3px;
+    left: 36%;
+    width: 20%;
+}
+
+.line-3:after{
+    bottom: 28px;
+    height: 3px;
+    left: 59%;
+    width: 15%;
+}
+
+/* .orange-area{
+    background: rgba(242, 112, 82, 0.33);
+    border-radius: 5px;
+    height: 47px;
+    margin: 25% 0 0 0;
+    width: 125px;
+} */
+
+
+.medica-img{
+    width: 625px;
+    /* height: 562; */
+}
+
+
+
+ 
+
+
+/* =================== CARDS AREA =================== */
+
+.cards-section{
+    margin: 15% 5%;
+}
+.cards-container{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+}
+
+.card-1,
+.card-2,
+.card-3{
+    cursor: pointer;
+    background: var(--color-neutral-20);
+    border-radius: 10px 50px 10px 10px;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+    /* flex-grow: 1;
+    flex-basis: 200; */
+    height: 308px;
+    margin: 0 2%;
+    transition: .5 ease;
+    width: 447px;
+}
+
+.card-1:hover,
+.card-2:hover,
+.card-3:hover{
+    transform: translateY(-8px);
+}
+
+.icons-card{
+    color: var(--color-strong-orange);
+    font-size: 45px;
+    margin: 8% 5% 0;
+}
+
+.title-card{
+    font-weight: 700;
+    margin: 0 6% 8%;
+    position: relative;
+}
+
+.line-card:after,
+.line-card-2:after,
+.line-card-3:after{
+    background: var(--color-strong-orange);
+    bottom: -2px;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transition: 0.6s;
+    width: 50%;
+}
+
+.line-card-2:after{
+    width: 45%;
+}
+
+.line-card-3:after{
+    width: 32%;
+}
+
+.subtitle-card{
+    color: var(--color-subtitle);
+    font-size: 15px;
+    margin: 2% 6%;
+}
+
+/* =================== PULSE AREA =================== */
+
+.pulse-area{
+    display: flex;
+    margin: 8% 5%;
+}
+
+.title-pulse{
+    text-align: center;
+}
+
+.info-pulse{
+    flex-direction: column;
+}
+
+.pulse-img{
+    width: 625px;
+    /* height: 562; */
+}
+
+.subtitle-pulse{
+    color: var(--color-orange);
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5%;
+}
+
+.info-pulse{
+    font-size: 14px;
+    margin: 5%;
+}
+
+.border-info{
+    border:2px var(--color-orange solid);
+}
+
+
+/* =================== SOLUTIONS AREA =================== */
+
+.solutions-section{
+    margin: 25% 0 0 0;
+}
+.title-solutions{
+    margin: 15% 0 0 0;
+    text-align: center;
+}
+
+.title{
+    position: relative;
+}
+
+.line-solutions:after{
+    background: var(--color-strong-orange);
+    bottom: -2px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: 0.6s;
+    width: 7%;
+}
+
+.solutions-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 10px; 
+    align-items: center;
+    justify-content: center;
+    margin: 8% 25%;
+  
+}
+
+.solutions-1, 
+.solutions-2, 
+.solutions-3, 
+.solutions-4, 
+.solutions-5, 
+.solutions-6 {
+    font-size: 17px;
+    padding: 10px; 
+    position: relative;
+}
+
+
+.line-solutions-1:after,
+.line-solutions-2:after,
+.line-solutions-3:after,
+.line-solutions-4:after,
+.line-solutions-5:after,
+.line-solutions-6:after{
+    background: var(--color-strong-orange);
+    bottom: 9px;
+    content: "";
+    height: 2px;
+    left: 25px;
+    position: absolute;
+    transition: 0.6s;
+    width: 55%;
+}
+
+.line-solutions-2:after{
+    left: 28px;
+    width: 46%;
+}
+
+.line-solutions-3:after{
+    left: 28px;
+    width: 38%;
+}
+
+.line-solutions-4:after{
+    left: 28px;
+    width: 52%;
+}
+
+.line-solutions-5:after{
+    left: 28px;
+    width: 60%;
+}
+
+.line-solutions-6:after{
+    left: 28px;
+    width: 90%;
+}
+
+/* =================== NEWSLATTER AREA =================== */
+
+.newslatter-container{
+    background: var(--color-light-orange);
+    height: 428px;
+    position: relative;
+    width: 100%;
+}
+
+.newslatter-area{
+    margin: 5%;
+}
+
+.newslatter-content{
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 10%; 
+    justify-content: center;
+    margin: 5% 8%;
+}
+
+.key-text{
+    position: relative;
+}
+
+
+/* .orange-news,
+.orange-news-2{
+    background: rgba(242, 112, 82, 0.33);
+    border-radius: 5px;
+    height: 38px;  
+    letter-spacing: 0.525px;
+    width: 99px;
+}
+
+.orange-news-2{
+    width: 204px;
+    height: 38px;
+} */
+
+.line-news-1::after,
+.line-news-2::after,
+.line-news-3::after,
+.line-news-4::after{
+    background: var(--color-strong-orange);
+    bottom: 7px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: 0.6s;
+    width: 33%;
+}
+
+.line-news-2::after{
+    bottom: 56px;
+    left: 4%;
+    width: 8%;
+}
+
+.line-news-3::after{
+    bottom: 32px;
+    left: 36%;
+    width: 15%;
+}
+
+.line-news-4::after{
+    left: 51%;
+    width: 20%;
+}
+
+
+.btn{
+    overflow: hidden;
+    position: relative;
+    transition: .5s ease-in;
+}
+
+.btn::before{
+    background: var(--color-light-orange-20);
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    transition: .8s ease-in;
+    width: 100%;
+    z-index: -1;
+}
+
+.btn-register{
+    border: 2px var(--color-strong-orange) solid;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--color-neutral-40);
+    font-size: 18px;
+    padding: 20px 8px;
+    text-align: center;
+    z-index: 0;
+}
+
+.btn-register::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.btn-register:hover{
+    color: var(--color-neutral-40);
+    transform: translateY(-5px); 
+}
+
+.btn-register:hover::before{
+    height: 180%;
+}
+
+
+.bpm-2{
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+
+/* =================== SCROLLTOP AREA =================== */
+
+.scroll-top {
+    background: var(--color-light-orange-20);
+    border-radius: 50%;
+    bottom: 50px;
+    cursor: pointer;
+    color: var(--color-neutral-40);
+    display: inline-block;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    transition: .5s ease;
+  }
+
+  .scroll-top::before{
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+
+  .scroll-top::after{
+    opacity: 1;
+  }
+ 
+  .scroll-top:hover{
+    background: #fde0da;
+    color: var(--color-red);
+    transform: translateY(-2px);
+  }
+
+  .ecg-icon{
+    padding: 8px;
+  }
+
+
+/* =================== RESPONSIVE AREA =================== */
+@media screen and (max-width: 768px) {
+
+    /* =================== INTRO AREA =================== */
+
+    .intro-container{
+        flex-wrap: wrap;
+    }
+
+    .text-area{
+        margin: 5%;
+    }
+
+    .medica-img{
+        align-items: center;
+        justify-content: center;
+        margin: 8% 8% 0 0;
+        width: 325px;
+    }
+
+    .line-1:after{
+        bottom: 66%;
+    }
+
+    .line-2:after{
+        bottom: 66%;
+        left: 73%;
+    }
+
+    .line-3:after{
+        bottom: 32%;
+        left: 1%;
+    }
+
+
+     /* =================== CARDS AREA =================== */
+    .cards-container{
+        flex-wrap: wrap;
+    }
+    
+    .card-1,
+    .card-2,
+    .card-3{
+        flex-grow: 1;
+        flex-basis: 200;
+        margin: 5%; 
+    }
+
+   /* =================== PULSE AREA =================== */
+
+   .pulse-area{
+        flex-wrap: wrap;
+        gap: 2rem;
+   }
+
+   .pulse-img{
+        width: 325px;
+        height: 162;
+        margin: 10% 0 15% 0 ;
+    }
+
+    .subtitle-pulse{
+        font-size: 18px;
+        padding: 15% 0 0 0;
+    }
+
+    .info-pulse{
+        margin: 15%;
+    }
+    
+
+    /* =================== SOLUTIONS AREA =================== */
+    .solutions-points {
+        grid-template-columns: 1fr; 
+    }
+
+    .line-solutions:after{
+        bottom: 27px;
+        width: 13%;
+    }
+
+    .solutions-1, 
+    .solutions-2, 
+    .solutions-3, 
+    .solutions-4, 
+    .solutions-5, 
+    .solutions-6 {
+        font-size: 16px;
+    }
+
+     /* =================== NEWSLATTER AREA =================== */
+     .newslatter-section{
+        margin: 0 0 15% 0;
+     }
+
+     .newslatter-container{
+        height: 588px;
+        margin: 0 0 5% 0;
+     }
+     
+     .newslatter-content{
+        grid-template-columns: 1fr; 
+     }
+
+     .key-text{
+        margin: 3% 0 0 0;
+     }
+
+     .btn-register{
+        margin: 10% 0 0 0;
+     }
+
+     .line-news-1::after{
+        bottom: 105px;
+        left: 6%;
+        width: 14%;
+     }
+
+     .line-news-2::after{
+        left: 16%;
+        width: 20%;
+     }
+
+     .line-news-3::after{
+        bottom: 30px;
+        left: 5%;
+        width: 50%;
+     }
+
+     .line-news-4::after{
+        left: 25%;
+        width: 25%;
+     }
+
+}
+
+
+
+
+
+
+

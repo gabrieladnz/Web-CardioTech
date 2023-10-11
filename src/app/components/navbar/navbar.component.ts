@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HostListener } from '@angular/core';
+
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+
+  showButton: boolean = false;
+
+  @HostListener('window:resize', ['$event'])
+  hiddenButton(){
+    this.showButton = window.innerWidth < 768;
+  }
 
 }

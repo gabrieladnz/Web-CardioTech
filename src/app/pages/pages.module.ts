@@ -5,6 +5,7 @@ import { PagesComponent } from './pages.component';
 import { HomeComponent } from './cardiotech/home.component';
 import { LoginComponent } from './login/login.component';
 import { HomeIAComponent } from './painel IA/home-ia.component';
+import { HomeIAComponent } from './painel IA/home-ia.component';
 import { PasswordRecoverComponent } from './password-recover/password-recover.component';
 import { PageRoutingModule } from './pages-routing-module';
 
