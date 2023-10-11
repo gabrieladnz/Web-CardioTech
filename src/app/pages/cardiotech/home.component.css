@@ -6,7 +6,6 @@
 
 .intro-content{
     display: flex;
-   
 }
 
 /* =================== HOME - TEXT AREA =================== */
@@ -70,7 +69,7 @@
 
 
 
- 
+
 
 
 /* =================== CARDS AREA =================== */
@@ -208,22 +207,22 @@
 
 .solutions-points {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-gap: 10px; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
     align-items: center;
     justify-content: center;
     margin: 8% 25%;
-  
+
 }
 
-.solutions-1, 
-.solutions-2, 
-.solutions-3, 
-.solutions-4, 
-.solutions-5, 
+.solutions-1,
+.solutions-2,
+.solutions-3,
+.solutions-4,
+.solutions-5,
 .solutions-6 {
     font-size: 17px;
-    padding: 10px; 
+    padding: 10px;
     position: relative;
 }
 
@@ -285,8 +284,8 @@
 .newslatter-content{
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-gap: 10%; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10%;
     justify-content: center;
     margin: 5% 8%;
 }
@@ -300,7 +299,7 @@
 .orange-news-2{
     background: rgba(242, 112, 82, 0.33);
     border-radius: 5px;
-    height: 38px;  
+    height: 38px;
     letter-spacing: 0.525px;
     width: 99px;
 }
@@ -377,7 +376,7 @@
 
 .btn-register:hover{
     color: var(--color-neutral-40);
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
 }
 
 .btn-register:hover::before{
@@ -414,7 +413,7 @@
   .scroll-top::after{
     opacity: 1;
   }
- 
+
   .scroll-top:hover{
     background: #fde0da;
     color: var(--color-red);
@@ -426,8 +425,8 @@
   }
 
 
-/* =================== RESPONSIVE AREA =================== */
-@media screen and (max-width: 768px) {
+/* =================== RESPONSIVE AREA SMARTPHONE =================== */
+@media screen and (max-width: 767px) {
 
     /* =================== INTRO AREA =================== */
 
@@ -465,13 +464,13 @@
     .cards-container{
         flex-wrap: wrap;
     }
-    
+
     .card-1,
     .card-2,
     .card-3{
         flex-grow: 1;
         flex-basis: 200;
-        margin: 5%; 
+        margin: 5%;
     }
 
    /* =================== PULSE AREA =================== */
@@ -495,11 +494,11 @@
     .info-pulse{
         margin: 15%;
     }
-    
+
 
     /* =================== SOLUTIONS AREA =================== */
     .solutions-points {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     .line-solutions:after{
@@ -507,11 +506,11 @@
         width: 13%;
     }
 
-    .solutions-1, 
-    .solutions-2, 
-    .solutions-3, 
-    .solutions-4, 
-    .solutions-5, 
+    .solutions-1,
+    .solutions-2,
+    .solutions-3,
+    .solutions-4,
+    .solutions-5,
     .solutions-6 {
         font-size: 16px;
     }
@@ -525,9 +524,9 @@
         height: 588px;
         margin: 0 0 5% 0;
      }
-     
+
      .newslatter-content{
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
      }
 
      .key-text{
@@ -561,6 +560,20 @@
      }
 
 }
+
+/* =================== RESPONSIVE AREA TABLETS =================== */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+/* =================== RESPONSIVE AREA DESKTOP =================== */
+
+@media screen and (max-width: 1024px) {
+
+}
+
 
 
 
