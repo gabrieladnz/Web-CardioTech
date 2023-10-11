@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+.painel {
+  background-color: #F6F6F6F6;
+  /* ocupa a cor inteira da page  */
+  height: 100vh;
+}
+
+.form-paciente {
+  background-color: #FFFF;
+}
