@@ -1,6 +1,5 @@
 <app-navbar-painel></app-navbar-painel>
 <app-sidebar-painel></app-sidebar-painel>
-
 <body>
   <!-- Painel  -->
   <section class="painel">
@@ -31,33 +30,39 @@
         <label>Insira os dados do resultado do exame do(a) paciente</label>
       </div>
 
-      <div class="tabela">
-        <table class="tabela-exame">
-            <tr>
-                <td class="tb-categoria">Idade</td>
-                <td class="tb-categoria">Sexo</td>
-                <td class="tb-categoria">Colesterol</td>
-                <td class="tb-categoria">Eletrocardiograma</td>
-                <td class="tb-categoria">Frequência cardíaca máxima</td>
-                <td class="tb-categoria">Pressão arterial</td>
-                <td class="tb-categoria">Dor no peito</td>
+      <!-- Tabela resultado dos exames  -->
+      <div class="container-tabela">
+
+        <div class="tabela">
+          <table class="tabela-exame">
+              <tr>
+                  <td class="tb-categoria">Idade</td>
+                  <td class="tb-categoria">Sexo</td>
+                  <td class="tb-categoria">Colesterol</td>
+                  <td class="tb-categoria">Eletrocardiograma</td>
+                  <td class="tb-categoria">Frequência cardíaca máxima</td>
+                  <td class="tb-categoria">Pressão arterial</td>
+                  <td class="tb-categoria">Dor no peito</td>
+                </tr>
+
+                <tr class="tr-categoria">
+                  <td>55</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
               </tr>
+          </table>
+        </div>
 
-              <tr class="tr-categoria">
-                <td>55</td>
-                <td>M</td>
-                <td>M</td>
-                <td>M</td>
-                <td>M</td>
-                <td>M</td>
-                <td>M</td>
-            </tr>
-        </table>
+        <div class="button-consulta">
+          <button>Consultar diagnóstico</button>
+        </div>
+
       </div>
 
-      <div class="button-consulta">
-        <button>Consultar diagnóstico</button>
-      </div>
     </div>
 
   </section>
