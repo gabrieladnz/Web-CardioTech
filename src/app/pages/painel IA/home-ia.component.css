@@ -5,7 +5,8 @@ body {
 /* =================> Painel  */
 .painel {
   background-color: #f6f6f6f6;
-  height: 100vh; /* ocupa a cor inteira da page  */
+  height: 100vh;
+  /* ocupa a cor inteira da page  */
 }
 
 .img-logo {
@@ -17,7 +18,7 @@ body {
 }
 
 .welcome-box {
-  padding: 2em;
+  padding: 0em 2em 2em 2em;
 }
 
 .div-logo {
@@ -81,7 +82,7 @@ body {
   margin-top: 30px;
   padding: 1em;
 
-  width: 77%;
+  /* width: 77%; */
   height: 250px;
 }
 
@@ -92,8 +93,6 @@ body {
   font-size: 12px;
   line-height: 19.5px;
   letter-spacing: 1.5%;
-
-  text-align: center;
 }
 
 .tb-categoria {
@@ -103,12 +102,17 @@ body {
 
 .tr-categoria td {
   padding-top: 10px;
+  text-align: center;
 }
 /* =================> Botão de consulta  */
 .button-consulta {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+
+  margin-left: 2em;
+  margin-bottom: 1.5em;
 }
 
 .button-consulta button {
@@ -124,4 +128,64 @@ body {
   letter-spacing: 1.5%;
 
   padding: 0.7em 1.3em 0.7em 1.3em;
+}
+
+.container-tabela {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+/* @Media query */
+
+/* Tela laptop  */
+@media only screen and (max-width: 1024px) {
+  .form-paciente {
+    width: 90%;
+  }
+
+  .button-consulta button {
+    padding: 0em 0em 0em 0em;
+  }
+}
+
+/* Tela tablet  */
+
+@media only screen and (max-width: 768px) {
+  .container-tabela {
+    flex-direction: column;
+  }
+  .button-consulta button {
+    margin-top: 20px;
+    padding: 0.7em 1.3em 0.7em 1.3em;
+  }
+}
+
+/* Tela Mobile  */
+@media only screen and (max-width: 680px) {
+  .form-paciente {
+    margin-left: 1em;
+  }
+
+  .tabela {
+    height: auto;
+  }
+
+  .tabela-exame {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tabela-exame tr {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button-consulta {
+    margin-left: 0;
+  }
+
+  .tr-categoria td {
+    padding: 12.5px;
+  }
 }
