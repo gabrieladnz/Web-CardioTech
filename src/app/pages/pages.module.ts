@@ -9,14 +9,14 @@ import { PasswordRecoverComponent } from './password-recover/password-recover.co
 import { PageRoutingModule } from './pages-routing-module';
 
 import { NavbarPainelComponent } from '../components/navbar-painel/navbar-painel.component';
-import { SidebarPainelComponent } from '../components/sidebar-painel/sidebar-painel.component';
-import { ModalIAComponent } from '../components/modal-ia/modal-ia.component';
+import { SidebarPainelComponent } from '../components/sidebar-painel/sidebar-painel.component'
 import { NavbarModule } from '../components/navbar/navbar.module';
 import { FooterModule } from '../components/footer/footer.module';
 
 // Angular Material
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
+import { SidebarPainelModule } from '../components/sidebar-painel/sidebar-painel.module';
 
 @NgModule({
   declarations: [
@@ -25,14 +25,13 @@ import { NgFor } from '@angular/common';
     HomeIAComponent,
     PasswordRecoverComponent,
     NavbarPainelComponent,
-    SidebarPainelComponent,
-    ModalIAComponent
   ],
   imports: [
     CommonModule,
     PageRoutingModule,
     NavbarModule,
     FooterModule,
+    SidebarPainelModule
   ],
 })
 export class PagesModule { }

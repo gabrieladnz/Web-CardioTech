@@ -1,8 +1,8 @@
-<div class="menu-lateral">
+<div class="menu-lateral" [ngClass]="{'menu-fechado': !mostrarSide}">
   <!-- Conteúdo do menu lateral -->
   <div class="logo-tipo">
     <img style="width: 110px;" src="../../../assets/logos/CardioTech - Logo Home.svg">
-    <button>
+    <button class="menu-btn" (click)="diminuirSide()">
       <img src="../../../assets/icons/menu-open.svg" alt="abrir menu">
     </button>
   </div>
