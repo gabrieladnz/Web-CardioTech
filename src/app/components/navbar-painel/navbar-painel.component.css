@@ -7,22 +7,27 @@
   margin-bottom: 4px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /*=============> Barra de pesquisa  */
-.barra-pesquisa  {
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+
   background-color: #FFFFFF;
 
   border-radius: 53px;
   border: none;
 
+  height: 40px;
   margin-top: 10px;
   margin-bottom: 5px;
-  padding: 10px 10px 10px 15px;
+  padding: 15px 10px 15px 10px;
 }
 
 .barra-pesquisa input {
+
   border: none;
   margin-left: 10px;
 }
@@ -42,7 +47,8 @@
 /* ================> Modal usuário  */
 
 .modal-usuario {
-display: flex;
+  display: flex;
+  /* align-items: center; */
 }
 
 .modal-usuario img {
@@ -56,9 +62,34 @@ display: flex;
   justify-content: flex-end;
 }
 
+.custom-mat-field {
+  width: 15px;
+  border-bottom: none;
+  background: none;
+}
+
+.barra-pesquisa input:focus {
+  outline: none;
+  border: 1px solid #cccccc00;
+}
+
+.select {
+  border: none;
+  background-color: transparent;
+  width: 15px;
+  cursor: pointer;
+}
+
 /* Media query  */
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 426px) {
   .txt-modal {
     display: none;
   }
 }
+
+@media only screen and (max-width: 376px) {
+  .barra-pesquisa input {
+    width: 100%;
+  }
+}
+
