@@ -92,7 +92,7 @@
     .footer-section{
         margin: 25% 0 0 0;
     }
-    
+
     .info-container{
         flex: 1;
         flex-wrap: wrap;
@@ -111,7 +111,7 @@
 
     .rights-area{
         flex: 1;
-        flex-direction: column;  
+        flex-direction: column;
         margin: 3%;
     }
 
@@ -126,6 +126,30 @@
     .bpm-footer{
         width: 22%;
     }
-    
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+  .footer-section{
+  margin: 25% 0 0 0;
+}
+
+.info-container{
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10%;
+}
+
+.logo-area{
+  /* width: 70%; */
+  margin: 10%;
+}
+
+.rights-area{
+  margin: 10%;
+}
+
 }
 

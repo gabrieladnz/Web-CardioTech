@@ -34,7 +34,7 @@
   margin-bottom: 30px;
 }
 
-.configuracoes button {}
+/* .configuracoes button {} */
 
 .menu span, .configuracoes span  {
   font-size: 14px;
@@ -55,6 +55,23 @@ button {
   background: none;
 }
 
+.menu-btn {
+  background: var(--color-neutral-10);
+  border-radius: 50px;
+  height: 23px;
+  position: absolute;
+  margin: 15% 4%;
+  width: 22px;
+}
+
+/* Estilos para o menu fechado */
+.menu-fechado{
+  width: 70px;
+}
+
+/* .menu-fechado::after, .menu span{
+  display: none;
+} */
 /* Media query  */
 @media only screen and (max-width: 1024px) {
   .menu span, .configuracoes span  {

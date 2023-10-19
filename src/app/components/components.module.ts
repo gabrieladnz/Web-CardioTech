@@ -7,28 +7,23 @@ import { ModalIAComponent } from './modal-ia/modal-ia.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarModule } from './navbar/navbar.module';
 import { FooterModule } from './footer/footer.module';
+import { SidebarPainelModule } from './sidebar-painel/sidebar-painel.module';
 
-import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
   declarations: [
 
     NavbarPainelComponent,
-    SidebarPainelComponent,
     ModalIAComponent,
   ],
   imports: [
     CommonModule,
-    MatSidenavModule,
-    NgModule,
-    MatDialog,
-    MatDialogModule
   ],
   exports: [
     NavbarModule,
-    FooterModule
+    FooterModule,
+    SidebarPainelModule
   ]
 })
 export class ComponentsModule { }

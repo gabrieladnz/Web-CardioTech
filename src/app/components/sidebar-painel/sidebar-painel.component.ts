@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class SidebarPainelComponent {
 
+  mostrarSide: boolean = true;
+
+  diminuirSide(){
+    this.mostrarSide = !this.mostrarSide
+
+  }
+
 }
+

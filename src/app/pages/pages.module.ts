@@ -9,20 +9,14 @@ import { PasswordRecoverComponent } from './password-recover/password-recover.co
 import { PageRoutingModule } from './pages-routing-module';
 
 import { NavbarPainelComponent } from '../components/navbar-painel/navbar-painel.component';
-import { SidebarPainelComponent } from '../components/sidebar-painel/sidebar-painel.component';
-import { ModalIAComponent } from '../components/modal-ia/modal-ia.component';
+import { SidebarPainelComponent } from '../components/sidebar-painel/sidebar-painel.component'
 import { NavbarModule } from '../components/navbar/navbar.module';
 import { FooterModule } from '../components/footer/footer.module';
 
 // Angular Material
 import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
 import { NgFor } from '@angular/common';
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIcon, MatIconModule } from '@angular/material/icon';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
+import { SidebarPainelModule } from '../components/sidebar-painel/sidebar-painel.module';
 
 @NgModule({
   declarations: [
@@ -31,17 +25,13 @@ import {MatButtonModule} from '@angular/material/button';
     HomeIAComponent,
     PasswordRecoverComponent,
     NavbarPainelComponent,
-    SidebarPainelComponent,
-    ModalIAComponent
   ],
   imports: [
     CommonModule,
     PageRoutingModule,
     NavbarModule,
     FooterModule,
-    MatDialogModule,
-    MatButtonModule,
-    MatFormFieldModule, MatSelectModule, NgFor, MatInputModule, FormsModule, MatIconModule
+    SidebarPainelModule
   ],
 })
 export class PagesModule { }

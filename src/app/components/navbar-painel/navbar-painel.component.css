@@ -53,8 +53,12 @@
 
 .modal-usuario img {
   width: 90px;
+  margin: 5% 0;
 }
 
+.seta{
+  margin: 0 0 0 5% 0;
+}
 .txt-modal {
   display: flex;
   flex-direction: column;
