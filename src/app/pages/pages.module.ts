@@ -16,13 +16,7 @@ import { FooterModule } from '../components/footer/footer.module';
 
 // Angular Material
 import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
 import { NgFor } from '@angular/common';
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIcon, MatIconModule } from '@angular/material/icon';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -39,9 +33,6 @@ import {MatButtonModule} from '@angular/material/button';
     PageRoutingModule,
     NavbarModule,
     FooterModule,
-    MatDialogModule,
-    MatButtonModule,
-    MatFormFieldModule, MatSelectModule, NgFor, MatInputModule, FormsModule, MatIconModule
   ],
 })
 export class PagesModule { }

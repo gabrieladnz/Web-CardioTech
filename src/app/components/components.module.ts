@@ -8,8 +8,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarModule } from './navbar/navbar.module';
 import { FooterModule } from './footer/footer.module';
 
-import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -21,10 +19,6 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
   ],
   imports: [
     CommonModule,
-    MatSidenavModule,
-    NgModule,
-    MatDialog,
-    MatDialogModule
   ],
   exports: [
     NavbarModule,
