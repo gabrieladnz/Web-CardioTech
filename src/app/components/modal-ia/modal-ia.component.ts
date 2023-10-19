@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -7,4 +7,11 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./modal-ia.component.css'],
 
 })
-export class ModalIAComponent {}
+export class ModalIAComponent implements OnInit {
+  ngOnInit(): void {
+
+  }
+  constructor(public dialogRef: MatDialogRef<ModalIAComponent>) {
+
+  }
+}

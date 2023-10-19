@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 
 :root{
 
@@ -17,7 +19,7 @@
     --color-strong-orange: #F27052;
     --color-border: #EAB289;
     --color-red: #D82727;
-    
+
 
     /* ============ Colors feedbacks ============ */
     --color-accept: #30A308;

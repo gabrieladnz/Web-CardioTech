@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalIAComponent } from 'src/app/components/modal-ia/modal-ia.component';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-home-ia',
@@ -10,12 +10,13 @@ import { MatDialog } from '@angular/material/dialog';
 export class HomeIAComponent {
   constructor(public dialog: MatDialog) { }
 
-  openModal(): void {
-    console.log("teste modal")
-    const dialogRef = this.dialog.open(ModalIAComponent);
+  openModal() {
+    console.log("Abrir modal")
+    const config: MatDialogConfig = {
+      // Configurações do modal (opcional)
+      width: '400px',
+    };
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    this.dialog.open(ModalIAComponent, config);
   }
 }

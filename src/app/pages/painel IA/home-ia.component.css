@@ -17,7 +17,8 @@ body {
 /* =================> Painel  */
 .painel {
   background-color: #f6f6f6f6;
-  height: 100vh;
+  min-height: 90vh;
+  padding-left:10px;
   /* ocupa a cor inteira da page  */
 }
 
@@ -140,7 +141,9 @@ body {
   line-height: 24px;
   letter-spacing: 1.5%;
 
+  /* padding: 1.5em 1.3em 1.5em 1.3em; */
   padding: 0.7em 1.3em 0.7em 1.3em;
+
 }
 
 .container-tabela {

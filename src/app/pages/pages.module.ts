@@ -14,7 +14,7 @@ import { ModalIAComponent } from '../components/modal-ia/modal-ia.component';
 import { NavbarModule } from '../components/navbar/navbar.module';
 import { FooterModule } from '../components/footer/footer.module';
 
-// Angular Material 
+// Angular Material
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { NgFor } from '@angular/common';
@@ -23,7 +23,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
-
 
 @NgModule({
   declarations: [

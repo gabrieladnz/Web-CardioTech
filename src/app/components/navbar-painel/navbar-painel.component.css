@@ -12,17 +12,22 @@
 
 /*=============> Barra de pesquisa  */
 .barra-pesquisa {
+  display: flex;
+  align-items: center;
+
   background-color: #FFFFFF;
 
   border-radius: 53px;
   border: none;
 
+  height: 40px;
   margin-top: 10px;
   margin-bottom: 5px;
-  padding: 10px 10px 10px 15px;
+  padding: 15px 10px 15px 10px;
 }
 
 .barra-pesquisa input {
+
   border: none;
   margin-left: 10px;
 }
@@ -43,7 +48,7 @@
 
 .modal-usuario {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .modal-usuario img {
@@ -63,26 +68,28 @@
   background: none;
 }
 
-.my-class {
-  background: none;
-  border: none;
-  /* background-image: url(../../../assets/icons/config.svg); */
-}
-
-.my-class option {
-  font-size: 14px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
 .barra-pesquisa input:focus {
   outline: none;
-  border: 1px solid #cccccc00; /* Pode personalizar a cor da borda conforme necessário */
+  border: 1px solid #cccccc00;
+}
+
+.select {
+  border: none;
+  background-color: transparent;
+  width: 15px;
+  cursor: pointer;
 }
 
 /* Media query  */
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 426px) {
   .txt-modal {
     display: none;
   }
 }
+
+@media only screen and (max-width: 376px) {
+  .barra-pesquisa input {
+    width: 100%;
+  }
+}
+
