@@ -214,20 +214,100 @@ body {
 
 /* Modal  */
 .modal {
-  background: white;
-  width: 300px;
-  height: 150px;
-  display: inline-table;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
   z-index: 90;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  flex-direction: column;
+
+  border-radius: 8px;
+  background-color: #F6F6F6;
+  padding: 50px;
+
+  /* max-height: 300px; */
+  overflow-y: auto; 
 }
 
 .overlay {
   background: #000;
   height: 100vh;
-  left: 0;
-  opacity: 0.5;
+  width: 100vw;
   position: fixed;
   top: 0;
-  width: 100vw;
+  left: 0;
+  opacity: 0.5;
   z-index: 0;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+}
+
+.titulo h5 {
+  margin-left: 10px;
+}
+
+.titulo img {
+  padding-bottom: 6px;
+}
+
+.paragrafo {
+  margin-top: 25px;
+}
+
+.texto-modal {}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.modal .cards {
+  text-align: center;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  text-align: center;
+
+  margin-top: 40px;
+}
+
+.bt-salvar {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row-reverse;
+}
+
+.bt-salvar button {
+  border-radius: 5px;
+  border: 1px solid #F27052;
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.24px;
+
+  padding: 10px;
 }

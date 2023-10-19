@@ -77,6 +77,26 @@
 <ng-container *ngIf="modal">
   <div class="overlay" (click)="closeModal()"></div>
   <div class="modal">
-    <app-modal-ia></app-modal-ia>
+
+    <div class="titulo">
+      <img src="../../../assets/icons/pulse.svg">
+      <h5>Diagnóstico do paciente Arlindo Nemesio da Silva</h5>
+    </div>
+
+    <div class="paragrafo">
+      <p class="texto-modal">Com base em nossa análise, <span style="color: green; font-weight: bold;"> não há
+          indicações</span> de um alto risco de ataque cardíaco. Continue com seu estilo de vida saudável e mantenha
+        consultas médicas regulares para monitoramento.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card card-1"></div>
+      <div class="card card-2"></div>
+      <div class="card card-3"></div>
+    </div>
+
+    <div class="bt-salvar">
+      <button>Salvar no prontuário</button>
+    </div>
   </div>
 </ng-container>
