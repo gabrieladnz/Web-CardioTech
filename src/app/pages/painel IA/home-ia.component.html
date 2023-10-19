@@ -1,35 +1,68 @@
 <app-navbar-painel></app-navbar-painel>
 <app-sidebar-painel></app-sidebar-painel>
-
 <body>
+  <!-- Painel  -->
   <section class="painel">
 
+    <!--  Apresentação da logo e nome do médico -->
     <div class="welcome-box">
-      <div>
-        <img src="../../../assets/logos/Pulse.svg">
+
+      <div class="div-logo">
+        <img class="img-logo" src="../../../assets/logos/Pulse.svg">
         <h5>Pulse</h5>
       </div>
 
-      <div>
+      <div class="txt-welcome">
         <h4>Olá, Dr. Fábio</h4>
         <p>Estou aqui para auxiliá-lo na análise dos casos de hoje.</p>
       </div>
-
     </div>
 
+    <!-- Formúlario do paciente  -->
     <div class="form-paciente">
 
       <div class="nome-paciente">
         <label>Nome do paciente</label>
+        <div class="caixa-nome">Arlindo Nemesio da Silva</div>
       </div>
 
       <div class="resultado-paciente">
         <label>Insira os dados do resultado do exame do(a) paciente</label>
       </div>
 
-      <div class="button-consulta">
-        <button>Consultar diagnóstico</button>
+      <!-- Tabela resultado dos exames  -->
+      <div class="container-tabela">
+
+        <div class="tabela">
+          <table class="tabela-exame">
+              <tr>
+                  <td class="tb-categoria">Idade</td>
+                  <td class="tb-categoria">Sexo</td>
+                  <td class="tb-categoria">Colesterol</td>
+                  <td class="tb-categoria">Eletrocardiograma</td>
+                  <td class="tb-categoria">Frequência cardíaca máxima</td>
+                  <td class="tb-categoria">Pressão arterial</td>
+                  <td class="tb-categoria">Dor no peito</td>
+                </tr>
+
+                <tr class="tr-categoria">
+                  <td>55</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
+              </tr>
+          </table>
+        </div>
+
+        <div class="button-consulta">
+          <button>Consultar diagnóstico</button>
+        </div>
+
       </div>
+
     </div>
 
   </section>
