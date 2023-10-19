@@ -1,11 +1,24 @@
-body {
+/* Componentes  */
+.header {
+  display: flex;
+  width: 100%;
   margin: 0;
+}
+
+body {
+  width: 91%;
+
+}
+
+.sidebar {
+  width: 9%;
 }
 
 /* =================> Painel  */
 .painel {
   background-color: #f6f6f6f6;
-  height: 100vh;
+  min-height: 90vh;
+  padding-left: 10px;
   /* ocupa a cor inteira da page  */
 }
 
@@ -18,7 +31,7 @@ body {
 }
 
 .welcome-box {
-  padding: 0em 2em 2em 2em;
+  padding: 2em 2em 2em 2em;
 }
 
 .div-logo {
@@ -104,6 +117,7 @@ body {
   padding-top: 10px;
   text-align: center;
 }
+
 /* =================> Botão de consulta  */
 .button-consulta {
   display: flex;
@@ -127,7 +141,9 @@ body {
   line-height: 24px;
   letter-spacing: 1.5%;
 
+  /* padding: 1.5em 1.3em 1.5em 1.3em; */
   padding: 0.7em 1.3em 0.7em 1.3em;
+
 }
 
 .container-tabela {
@@ -154,6 +170,7 @@ body {
   .container-tabela {
     flex-direction: column;
   }
+
   .button-consulta button {
     margin-top: 20px;
     padding: 0.7em 1.3em 0.7em 1.3em;
@@ -188,4 +205,29 @@ body {
   .tr-categoria td {
     padding: 12.5px;
   }
+
+  .sidebar {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+/* Modal  */
+.modal {
+  background: white;
+  width: 300px;
+  height: 150px;
+  display: inline-table;
+  z-index: 90;
+}
+
+.overlay {
+  background: #000;
+  height: 100vh;
+  left: 0;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 0;
 }
