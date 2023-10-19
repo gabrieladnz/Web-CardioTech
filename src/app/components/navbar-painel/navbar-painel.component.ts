@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar-painel.component.css']
 })
 export class NavbarPainelComponent {
+  showSelect: boolean = false;
+
+  toggleSelect() {
+    this.showSelect = !this.showSelect;
+  }
 
 }

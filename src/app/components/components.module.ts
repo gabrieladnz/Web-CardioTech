@@ -7,19 +7,19 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarModule } from './navbar/navbar.module';
 import { FooterModule } from './footer/footer.module';
 
-
-
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
 
-
     NavbarPainelComponent,
     SidebarPainelComponent,
-    ModalIAComponent
+    ModalIAComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatSidenavModule,
+    NgModule,
   ],
   exports: [
     NavbarModule,

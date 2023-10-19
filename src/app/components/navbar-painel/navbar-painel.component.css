@@ -7,11 +7,11 @@
   margin-bottom: 4px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /*=============> Barra de pesquisa  */
-.barra-pesquisa  {
+.barra-pesquisa {
   background-color: #FFFFFF;
 
   border-radius: 53px;
@@ -42,7 +42,8 @@
 /* ================> Modal usuário  */
 
 .modal-usuario {
-display: flex;
+  display: flex;
+  align-items: center;
 }
 
 .modal-usuario img {
@@ -54,6 +55,29 @@ display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-end;
+}
+
+.custom-mat-field {
+  width: 15px;
+  border-bottom: none;
+  background: none;
+}
+
+.my-class {
+  background: none;
+  border: none;
+  /* background-image: url(../../../assets/icons/config.svg); */
+}
+
+.my-class option {
+  font-size: 14px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.barra-pesquisa input:focus {
+  outline: none;
+  border: 1px solid #cccccc00; /* Pode personalizar a cor da borda conforme necessário */
 }
 
 /* Media query  */

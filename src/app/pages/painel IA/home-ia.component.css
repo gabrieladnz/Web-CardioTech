@@ -1,5 +1,17 @@
-body {
+/* Componentes  */
+.header {
+  display: flex;
+  width: 100%;
   margin: 0;
+}
+
+body {
+  width: 91%;
+
+}
+
+.sidebar {
+  width: 9%;
 }
 
 /* =================> Painel  */
@@ -18,7 +30,7 @@ body {
 }
 
 .welcome-box {
-  padding: 0em 2em 2em 2em;
+  padding: 2em 2em 2em 2em;
 }
 
 .div-logo {
@@ -104,6 +116,7 @@ body {
   padding-top: 10px;
   text-align: center;
 }
+
 /* =================> Botão de consulta  */
 .button-consulta {
   display: flex;
@@ -154,6 +167,7 @@ body {
   .container-tabela {
     flex-direction: column;
   }
+
   .button-consulta button {
     margin-top: 20px;
     padding: 0.7em 1.3em 0.7em 1.3em;
@@ -187,5 +201,10 @@ body {
 
   .tr-categoria td {
     padding: 12.5px;
+  }
+
+  .sidebar {
+    visibility: hidden;
+    position: absolute;
   }
 }

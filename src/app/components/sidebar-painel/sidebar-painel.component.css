@@ -1,3 +1,56 @@
 .menu-lateral {
+  position: relative;
+  height: 100%;
+  /* height: 80vh;  */
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
   background-color: #F6F6F6;
+  border-radius: 30px 0px 0px 0px;
+  background: #F6F6F6;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.logo-tipo {
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu button {
+  margin-bottom: 50px;
+  /* padding: 20px; */
+  text-align: left;
+}
+
+.configuracoes {
+  margin-bottom: 30px;
+}
+
+.configuracoes button {}
+
+.menu span, .configuracoes span  {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.bt-pulse {
+  border-radius: 5px;
+  background: rgba(242, 112, 82, 0.22);
+}
+
+.bt-prontuario {
+  margin-top: 50px;
+}
+
+button {
+  border: none;
+  background: none;
 }

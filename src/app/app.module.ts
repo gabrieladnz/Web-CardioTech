@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './pages/login/login.module';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
