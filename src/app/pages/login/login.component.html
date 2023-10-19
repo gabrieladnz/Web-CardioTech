@@ -7,7 +7,49 @@
     <title>Painel</title>
 </head>
 <body>
-    <p>login works!!!!</p>
-    <a routerLink="/painel"> Entrar </a>
+
+    <!-- <img class="detail-leaf" src="../../../assets/img/bg-bpm.png" alt="leaf"> -->
+
+    <section class="main-screen" id="main-screen">
+     <div class="main-container">
+        <form class="form" #formDir="ngForm">
+            <form class="form-input">
+                <h5 class="header">Área do Cooperador</h5>
+                
+                <!--NAME-->
+                <label for="CRM"></label><br>
+                <input class="form-input" placeholder="CRM" type="text" name="CRM" id="user" formControlName="nome">
+                <!-- O (focus) é um evento de interação do usuário que é acionado quando o elemento html recebe o foco, nesse caso, quando os inputs são selecionados-->
+                <!-- ----------------- NAME VALIDATION ----------------- -->
+                <!-- <div *ngIf="nome.invalid && nome.touched" class="error-validation">
+                    <p *ngIf="nome.errors?.['required']">Por favor, insira o seu nome.</p>
+                </div> -->
+                
+                <!--PASSWORD-->
+                <br><label for="senha" ></label><br>
+                <input class="form-input" placeholder="Senha" type="{{showPass ? 'text' : 'password'}}" name="senha" id="senha" formControlName="senha"> 
+                <!-- ?: operador ternário | type="{{showPass ? 'text' : 'password'}}": Permite alterar entre mostrar o texto e ocultar com o password | ?: operador ternário, representa o if-else -->
+                
+                <div class="forget-password">
+                    
+                    <input type="checkbox" id="lembrarSenha" name="lembrarSenha" value="senha">
+                    <label for="lembrarSenha"> Lembrar senha </label>
+                    
+                    <a class="forget-pass" routerLink="/password-recover"><u>Esqueceu a senha?</u></a>
+                   
+                </div>
+                <!--<button class="btn-Entrar" id="submit-btn" type="submit">Entrar</button>-->
+
+                <br><a class="btn-signIn " routerLink="/painel" target="_blank"> Entrar </a><br>
+                
+                <img class="logo-cardioTech" _ngcontent-riy-c1="" src="../../../assets/logos/CardioTech - Logo Home.svg" alt="">
+            </form>
+    
+    </form>
+</div>
+</section>
+
+    <!-- <p>login works!!!!</p> -->
+    
 </body>
 </html>
