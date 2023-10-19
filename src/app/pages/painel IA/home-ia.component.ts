@@ -8,15 +8,17 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
   styleUrls: ['./home-ia.component.css']
 })
 export class HomeIAComponent {
+
+  modal: boolean = false;
+
   constructor(public dialog: MatDialog) { }
 
-  openModal() {
-    console.log("Abrir modal")
-    const config: MatDialogConfig = {
-      // Configurações do modal (opcional)
-      width: '400px',
-    };
-
-    this.dialog.open(ModalIAComponent, config);
+  openModal(): boolean {
+    return this.modal = false;
   }
+
+  closeModal(): boolean {
+    return this.modal = false;
+  }
+
 }

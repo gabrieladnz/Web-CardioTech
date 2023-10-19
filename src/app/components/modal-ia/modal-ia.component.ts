@@ -1,17 +1,10 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-modal-ia',
   templateUrl: './modal-ia.component.html',
-  styleUrls: ['./modal-ia.component.css'],
-
+  styleUrls: ['./modal-ia.component.css']
 })
-export class ModalIAComponent implements OnInit {
-  ngOnInit(): void {
+export class ModalIAComponent {
 
-  }
-  constructor(public dialogRef: MatDialogRef<ModalIAComponent>) {
-
-  }
 }

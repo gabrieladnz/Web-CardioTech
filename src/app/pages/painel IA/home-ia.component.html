@@ -1,5 +1,6 @@
 <header class="header">
   <app-sidebar-painel class="sidebar"></app-sidebar-painel>
+
   <body>
     <!-- Navbar  -->
     <app-navbar-painel></app-navbar-painel>
@@ -38,25 +39,25 @@
 
           <div class="tabela">
             <table class="tabela-exame">
-                <tr>
-                    <td class="tb-categoria">Idade</td>
-                    <td class="tb-categoria">Sexo</td>
-                    <td class="tb-categoria">Colesterol</td>
-                    <td class="tb-categoria">Eletrocardiograma</td>
-                    <td class="tb-categoria">Frequência cardíaca máxima</td>
-                    <td class="tb-categoria">Pressão arterial</td>
-                    <td class="tb-categoria">Dor no peito</td>
-                  </tr>
+              <tr>
+                <td class="tb-categoria">Idade</td>
+                <td class="tb-categoria">Sexo</td>
+                <td class="tb-categoria">Colesterol</td>
+                <td class="tb-categoria">Eletrocardiograma</td>
+                <td class="tb-categoria">Frequência cardíaca máxima</td>
+                <td class="tb-categoria">Pressão arterial</td>
+                <td class="tb-categoria">Dor no peito</td>
+              </tr>
 
-                  <tr class="tr-categoria">
-                    <td>55</td>
-                    <td>M</td>
-                    <td>M</td>
-                    <td>M</td>
-                    <td>M</td>
-                    <td>M</td>
-                    <td>M</td>
-                </tr>
+              <tr class="tr-categoria">
+                <td>55</td>
+                <td>M</td>
+                <td>M</td>
+                <td>M</td>
+                <td>M</td>
+                <td>M</td>
+                <td>M</td>
+              </tr>
             </table>
           </div>
 
@@ -71,3 +72,11 @@
     </section>
   </body>
 </header>
+
+<!-- Modal  -->
+<ng-container *ngIf="modal">
+  <div class="overlay" (click)="closeModal()"></div>
+  <div class="modal">
+    <app-modal-ia></app-modal-ia>
+  </div>
+</ng-container>

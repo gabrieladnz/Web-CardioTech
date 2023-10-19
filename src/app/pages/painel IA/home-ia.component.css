@@ -18,7 +18,7 @@ body {
 .painel {
   background-color: #f6f6f6f6;
   min-height: 90vh;
-  padding-left:10px;
+  padding-left: 10px;
   /* ocupa a cor inteira da page  */
 }
 
@@ -210,4 +210,24 @@ body {
     visibility: hidden;
     position: absolute;
   }
+}
+
+/* Modal  */
+.modal {
+  background: white;
+  width: 300px;
+  height: 150px;
+  display: inline-table;
+  z-index: 90;
+}
+
+.overlay {
+  background: #000;
+  height: 100vh;
+  left: 0;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 0;
 }
