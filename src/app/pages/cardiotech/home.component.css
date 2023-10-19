@@ -403,6 +403,7 @@
     right: 20px;
     text-align: center;
     transition: .5s ease;
+    z-index: 1;
   }
 
   .scroll-top::before{
@@ -566,7 +567,100 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
    /* =================== INTRO AREA =================== */
-   
+
+   .intro-container{
+    flex-wrap: wrap;
+  }
+
+  .text-area{
+    margin: 8%;
+  }
+
+  .home-img{
+  margin: 5%;
+  width: 25%;
+  }
+
+  .line-1:after{
+  bottom: 50%;
+  }
+
+.line-2:after{
+  bottom: 50%;
+  left: 31%;
+  }
+
+.line-3:after{
+  bottom: 50%;
+  left: 53%;
+  }
+
+/* =================== CARDS AREA =================== */
+
+.cards-container{
+  flex-wrap: wrap;
+}
+
+.card-1,
+.card-2,
+.card-3{
+  margin: 5%;
+}
+
+/* =================== PULSE AREA =================== */
+
+.pulse-area{
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.pulse-img{
+  margin: 8%;
+}
+
+/* =================== SOLUTIONS AREA =================== */
+
+.solution-pulse{
+  margin: 5% 0 20% 0;
+}
+
+.title-solutions{
+  margin: 0 0 0 5%;
+}
+
+.solutions-points{
+  align-items: center;
+  justify-content: center;
+  margin: 6%;
+}
+
+/* =================== NEWSLATTER AREA =================== */
+
+.key-text{
+  width: 300px;
+}
+
+.line-news-1::after{
+  bottom: 82%;
+  left: 6%;
+  width: 14%;
+}
+
+.line-news-2::after{
+  left: 16%;
+  width: 20%;
+}
+
+.line-news-3::after{
+  bottom: 30px;
+  left: 5%;
+  width: 50%;
+}
+
+.line-news-4::after{
+  left: 25%;
+  width: 25%;
+}
 
 }
 
@@ -596,6 +690,7 @@
  /* =================== NEWSLATTER AREA =================== */
 
  .line-news-1::after{
+  bottom: 120%;
   width: 20%;
   }
 
