@@ -3,12 +3,14 @@ import { ActivatedRouteSnapshot, CanActivate, RouterModule, RouterStateSnapshot,
 import { HomeComponent } from './cardiotech/home.component';
 import { LoginComponent } from './login/login.component';
 import { HomeIAComponent } from './painel IA/home-ia.component';
+import { PasswordRecoverComponent } from './password-recover/password-recover.component';
 
 const routes: Routes = [
 
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'painel', component: HomeIAComponent}
+  {path: 'painel', component: HomeIAComponent},
+  {path: 'password-recover', component: PasswordRecoverComponent}
 ];
 
 @NgModule({
