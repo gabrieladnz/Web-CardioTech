@@ -34,16 +34,17 @@
   margin-bottom: 30px;
 }
 
-/* .configuracoes button {} */
+.configuracoes button {}
 
-.menu span, .configuracoes span  {
+.menu span,
+.configuracoes span {
   font-size: 14px;
   margin-left: 10px;
 }
 
 .bt-pulse {
   border-radius: 5px;
-  background: rgba(242, 112, 82, 0.22);
+  /* background: rgba(242, 112, 82, 0.22); */
 }
 
 .bt-prontuario {
@@ -55,31 +56,59 @@ button {
   background: none;
 }
 
-.menu-btn {
-  background: var(--color-neutral-10);
-  border-radius: 50px;
-  height: 23px;
+/* Efeitos botões  */
+.menu button,
+.configuracoes button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.menu button:hover,
+.configuracoes button:hover {
+  transform: translateY(-5px);
+}
+
+/* Barra lateral  */
+.abrir-barra {
+  display: inline-flex;
   position: absolute;
-  margin: 15% 4%;
-  width: 22px;
+  margin-left: 90px;
+  /* max-margin-left: 90px; */
+  z-index: 1;
 }
 
-/* Estilos para o menu fechado */
-.menu-fechado{
-  width: 70px;
-}
-
-/* .menu-fechado::after, .menu span{
+.hidden {
   display: none;
-} */
+}
+
+
 /* Media query  */
 @media only screen and (max-width: 1024px) {
-  .menu span, .configuracoes span  {
+
+  .menu span,
+  .configuracoes span {
     display: none;
   }
 
   .logo-tipo {
     visibility: hidden;
   }
+
+  .abrir-barra {
+    margin-left: 40px;
+  }
 }
 
+/* Cor ao clicar no botão  */
+.cor-ativa {
+  border-radius: 5px;
+  background: rgba(242, 112, 82, 0.22);
+}
+
+@media only screen and (max-width: 768px) {
+  .abrir-barra {
+    margin-left: auto;
+  }
+}

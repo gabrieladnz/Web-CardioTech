@@ -8,11 +8,21 @@ import { Component } from '@angular/core';
 export class SidebarPainelComponent {
 
   mostrarSide: boolean = true;
+  activeButton: number = 0;
+  menuFechado: boolean = false;
 
-  diminuirSide(){
+  isButtonClicked: boolean = false;
+
+  diminuirSide() {
     this.mostrarSide = !this.mostrarSide
 
   }
 
-}
+  onButtonClick(buttonNumber: number): void {
+    this.activeButton = buttonNumber;
+  }
 
+  fecharMenu() {
+    this.menuFechado = !this.menuFechado;
+  }
+}
