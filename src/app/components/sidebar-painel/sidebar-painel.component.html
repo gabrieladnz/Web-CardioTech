@@ -1,27 +1,31 @@
-<div class="menu-lateral" [ngClass]="{'menu-fechado': !mostrarSide}">
+<div class="abrir-barra">
+  <button (click)="fecharMenu()">
+    <img src="../../../assets/icons/menu-open.svg" alt="abrir menu">
+  </button>
+</div>
+
+<div class="menu-lateral" [ngClass]="{ 'hidden': menuFechado }">
   <!-- Conteúdo do menu lateral -->
   <div class="logo-tipo">
     <img style="width: 110px;" src="../../../assets/logos/CardioTech - Logo Home.svg">
-    <button class="menu-btn" (click)="diminuirSide()">
-      <img src="../../../assets/icons/menu-open.svg" alt="abrir menu">
-    </button>
   </div>
 
   <!-- Menu lateral  -->
-  <div class="menu">
-    <button type="button" routerLink="/home">
+  <div class="menu" id="menu">
+    <button type="button" (click)="onButtonClick(1)" [ngClass]="{ 'cor-ativa': activeButton === 1 }">
       <img src="../../../assets/icons/home.svg" alt="Home">
       <span>Home</span>
     </button>
-    <button type="button">
+    <button type="button" (click)="onButtonClick(2)" [ngClass]="{ 'cor-ativa': activeButton === 2 }">
       <img src="../../../assets/icons/agenda.svg" alt="Agenda">
       <span>Agenda</span>
     </button>
-    <button type="button" class="bt-pulse">
+    <button type="button" class="bt-pulse" (click)="onButtonClick(3)" [ngClass]="{ 'cor-ativa': activeButton === 3 }">
       <img src="../../../assets/icons/pulse.svg" alt="Pulse">
       <span>Pulse</span>
     </button>
-    <button type="button" class="bt-prontuario">
+    <button type="button" class="bt-prontuario" (click)="onButtonClick(4)"
+      [ngClass]="{ 'cor-ativa': activeButton === 4 }">
       <img src="../../../assets/icons/prontuarios.svg" alt="Prontuário">
       <span>Prontuários</span>
     </button>
@@ -29,7 +33,7 @@
 
   <!-- Botão configurações  -->
   <div class="configuracoes">
-    <button type="button">
+    <button type="button" (click)="onButtonClick(5)" [ngClass]="{ 'cor-ativa': activeButton === 5 }">
       <img src="../../../assets/icons/config.svg" alt="Configurações">
       <span>Ajustes</span>
     </button>

@@ -9,8 +9,10 @@ import { ModalIAComponent } from 'src/app/components/modal-ia/modal-ia.component
 export class HomeIAComponent {
 
   modal: boolean = false;
+  showModal: boolean = false;
 
   constructor() { }
+
 
   openModal(): boolean {
     return this.modal = true;
@@ -19,5 +21,6 @@ export class HomeIAComponent {
   closeModal(): boolean {
     return this.modal = false;
   }
+
 
 }

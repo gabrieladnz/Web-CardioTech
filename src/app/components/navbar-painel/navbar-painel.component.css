@@ -53,17 +53,15 @@
 
 .modal-usuario img {
   width: 90px;
-  margin: 5% 0;
 }
 
-.seta{
-  margin: 0 0 0 5% 0;
-}
 .txt-modal {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-end;
+
+  margin-top: 15px;
 }
 
 .custom-mat-field {
@@ -81,19 +79,25 @@
   border: none;
   background-color: transparent;
   width: 15px;
+  margin-top: 10px;
+
   cursor: pointer;
 }
 
 /* Media query  */
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 600px) {
   .txt-modal {
     display: none;
   }
-}
 
-@media only screen and (max-width: 376px) {
   .barra-pesquisa input {
     width: 100%;
   }
 }
 
+
+@media only screen and (max-width: 426px) {
+  .txt-modal {
+    display: none;
+  }
+}
