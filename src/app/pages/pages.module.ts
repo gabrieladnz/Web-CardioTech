@@ -8,8 +8,8 @@ import { HomeIAComponent } from './painel IA/home-ia.component';
 import { PasswordRecoverComponent } from './password-recover/password-recover.component';
 import { PageRoutingModule } from './pages-routing-module';
 
-import { NavbarPainelComponent } from '../components/navbar-painel/navbar-painel.component';
-import { SidebarPainelComponent } from '../components/sidebar-painel/sidebar-painel.component'
+// import { NavbarPainelComponent } from '../components/navbar-painel/navbar-painel.component';
+// import { SidebarPainelComponent } from '../components/sidebar-painel/sidebar-painel.component'
 import { NavbarModule } from '../components/navbar/navbar.module';
 import { FooterModule } from '../components/footer/footer.module';
 
@@ -17,6 +17,8 @@ import { FooterModule } from '../components/footer/footer.module';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { SidebarPainelModule } from '../components/sidebar-painel/sidebar-painel.module';
+import { PainelCentralComponent } from './painel-central/painel-central.component';
+import { NavbarPainelModule } from '../components/navbar-painel/navbar-painel.module';
 
 @NgModule({
   declarations: [
@@ -24,14 +26,15 @@ import { SidebarPainelModule } from '../components/sidebar-painel/sidebar-painel
     HomeComponent,
     HomeIAComponent,
     PasswordRecoverComponent,
-    NavbarPainelComponent,
+    PainelCentralComponent,
   ],
   imports: [
     CommonModule,
     PageRoutingModule,
     NavbarModule,
     FooterModule,
-    SidebarPainelModule
+    SidebarPainelModule,
+    NavbarPainelModule
   ],
 })
 export class PagesModule { }

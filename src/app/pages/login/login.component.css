@@ -51,6 +51,9 @@ input::placeholder{
     font-size: small;
     margin-top: 5px;
 }
+.lembrarSenha{
+    font-size: 3px;
+}
 .forget-pass{
     color: black;
     float: right;
@@ -68,7 +71,7 @@ input::placeholder{
     color: white;
     border: unset;
     border-radius: 5px;
-    filter: drop-shadow(1px 3px 4px #a58465);
+    /* filter: drop-shadow(1px 3px 4px #a58465); */
 }
 .logo-cardioTech{
     width: 40%;

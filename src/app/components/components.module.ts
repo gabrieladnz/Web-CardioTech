@@ -8,13 +8,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarModule } from './navbar/navbar.module';
 import { FooterModule } from './footer/footer.module';
 import { SidebarPainelModule } from './sidebar-painel/sidebar-painel.module';
+import { NavbarPainelModule } from './navbar-painel/navbar-painel.module';
+
 
 
 
 @NgModule({
   declarations: [
-
-    NavbarPainelComponent,
     ModalIAComponent,
   ],
   imports: [
@@ -23,7 +23,8 @@ import { SidebarPainelModule } from './sidebar-painel/sidebar-painel.module';
   exports: [
     NavbarModule,
     FooterModule,
-    SidebarPainelModule
+    SidebarPainelModule,
+    NavbarPainelModule
   ]
 })
 export class ComponentsModule { }
