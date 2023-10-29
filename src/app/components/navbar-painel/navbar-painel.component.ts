@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar-painel.component.css']
 })
 export class NavbarPainelComponent {
+  modal: boolean = false;
+
+  openModal(){
+    console.log('clicado')
+    this.modal = !this.modal;
+  }
 }

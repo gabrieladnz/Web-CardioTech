@@ -1,46 +1,49 @@
 .menu-lateral {
-  position: relative;
-  /* height: 100%; */
-  min-height: 100vh;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-
-  background-color: #F6F6F6;
-  border-radius: 30px 0px 0px 0px;
   background: #F6F6F6;
+  border-radius: 15px 0px 0px 0px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  position: relative;
+  transition: width ease-in-out 0.4s;
+  width: 134px;
 }
 
 .logo-tipo {
   text-align: center;
+  padding: 10px 5px;
+
 }
 
-.menu {
+.cardio-logo{
+  padding: 5% 10%;
+}
+
+.menu{
+  margin: 80% 0;
+  padding: 10px 5px;
+}
+
+.menu-links{
   display: flex;
-  flex-direction: column;
+  margin: 15% 0;
 }
 
-.menu button {
-  margin-bottom: 50px;
-  /* padding: 20px; */
-  text-align: left;
+.menu-text{
+  font-size: 13px;
+  margin: 5% 6%;
 }
+
+
 
 .configuracoes {
-  margin-bottom: 30px;
+  padding: 10px 5px;
 }
 
-.configuracoes button {}
+.configuracoes button {
+  margin: 60% 0;
 
-.menu span,
-.configuracoes span {
-  font-size: 14px;
-  margin-left: 10px;
 }
+
 
 .bt-pulse {
   border-radius: 5px;
@@ -72,15 +75,66 @@ button {
 
 /* Barra lateral  */
 .abrir-barra {
+  background: var(--color-neutral-10);
+  border-radius: 15px;
   display: inline-flex;
+  height: 23px;
   position: absolute;
-  margin-left: 90px;
+  /* margin-left: 90px; */
+  transform: translate(122px, 25px);
+  width: 22px;
   /* max-margin-left: 90px; */
   z-index: 1;
 }
 
-.hidden {
-  display: none;
+.btn-abrir{
+  margin: 0 18% 5%;
+}
+
+.active{
+  background: rgba(242, 112, 82, 0.22);
+  border-radius: 5px;
+  height: 29.389px;
+  padding: 10px 5px;
+  width: 115px;
+}
+
+.btn-grow{
+  transform: translate(80px, 30px);
+  width: 22px;
+}
+
+.logo-cardio{
+  padding: 10px 5px;
+  width: 80px;
+  height: 58px;
+}
+
+.hidden{
+  width: 88px;
+
+  .menu{
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+  .menu-text{
+    display: none;
+  }
+ 
+  .active{
+    align-items: center;
+    height: 29.389px;
+    justify-content: center;
+    margin: 5%;
+    padding: 10px 5px;
+    width: 40px;
+  }
+
+  .configuracoes{
+    margin: 90% 0;
+    padding: 15px;
+  }
 }
 
 

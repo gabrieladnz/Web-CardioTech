@@ -1,0 +1,67 @@
+.painel-central{
+    min-height: 90vh;
+    background: var(--color-neutral-20);
+    background-image: url(../../../assets/background/bg-bpm2.png);
+    background-position: 15% 66%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+}
+
+
+.welcome{
+    padding: 6% 6% 0 6%;
+}
+
+.subtitle{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 1% 0 0 0;
+}
+
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: var(--color-neutral-10);
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 221px;
+    margin: 5%;
+    width: 520px;
+}
+
+.card-content{
+    margin: 2% 0 0 5%;
+}
+
+.text-card{
+    margin: 5% 0 10% 0;
+}
+
+.title-card{
+    color: var(--color-strong-orange);
+    font-size: 20px;
+}
+
+.subtitle-card{
+    color: var(--color-subtitle);
+    font-size: 14px;
+}
+
+.card-number{
+    color: var(--color-accept);
+    font-size: 40px;
+    margin: 0 2% 0 0;
+    /* margin: 5%; */
+}
+
+.card-moving{
+    font-size: 35px;
+}
+
+
+

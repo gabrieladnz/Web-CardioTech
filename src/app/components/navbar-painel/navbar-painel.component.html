@@ -13,16 +13,37 @@
   <!-- Modal usuário  -->
   <div class="modal-usuario">
     <img src="../../../assets/img/medico-modal.svg">
+
     <div class="txt-modal">
       <p style="font-weight: 600; font-size: 12px; margin: 0;">Fábio Nunes</p>
       <p style="font-size: 12px;">Cardiologista</p>
     </div>
-    <div class="div-select">
+
+    <span class="btn-show material-symbols-outlined" (click)="openModal()">
+      expand_more
+    </span>
+
+    <ng-container *ngIf="modal">
+      <div class="modal">     
+
+        <span class="material-symbols-outlined">
+          person
+        </span>
+        
+        <h4>Editar perfil</h4>
+      </div>
+
+    </ng-container>
+    
+    <!-- <div class="div-select">
       <select class="select">
         <option></option>
-        <option>Configurações</option>
+        <option class="edit-user">
+          <img src="../../../assets/icons/home.svg" alt="">
+          Editar Perfil
+        </option>
       </select>
-    </div>
+    </div>  -->
 
   </div>
 </nav>

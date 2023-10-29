@@ -667,10 +667,10 @@
 
 /* =================== RESPONSIVE AREA DESKTOP =================== */
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
 
    /* =================== INTRO AREA =================== */
-
+/* 
     .line-1:after{
       bottom: 50%;
     }
@@ -685,11 +685,11 @@
       bottom: 50%;
       left: 47%;
       width: 13%;
-    }
+    } */
 
  /* =================== NEWSLATTER AREA =================== */
 
- .line-news-1::after{
+ /* .line-news-1::after{
   bottom: 120%;
   width: 20%;
   }
@@ -704,8 +704,8 @@
   .line-news-4::after{
     left: 35%;
     width: 18%;
-  }
-}
+  } */
+/* } */
 
 
 

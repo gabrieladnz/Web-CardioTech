@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SidebarPainelComponent } from './sidebar-painel.component';
 import { RouterModule } from '@angular/router';
+import { NavbarPainelComponent } from './navbar-painel.component';
 
 
 
 
 @NgModule({
   declarations: [
-    SidebarPainelComponent
+    NavbarPainelComponent
   ],
   imports: [
     CommonModule,
     RouterModule
   ],
   exports: [
-    SidebarPainelComponent
+    NavbarPainelComponent
   ]
 })
-export class SidebarPainelModule { }
+export class NavbarPainelModule { }
 
 
 
