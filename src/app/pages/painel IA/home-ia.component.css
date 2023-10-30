@@ -1,12 +1,17 @@
 /* Componentes  */
-.header {
+
+/* .header {
+  display: flex;
+  width: 100%;
+} */
+
+body {
   display: flex;
   width: 100%;
 }
 
-body {
-  width: 91%;
-
+main{
+  width: 100%;
 }
 
 .sidebar {

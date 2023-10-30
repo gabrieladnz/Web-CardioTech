@@ -1,3 +1,12 @@
+body {
+  display: flex;
+  width: 100%;
+}
+
+header{
+  z-index: 1;
+}
+
 .painel-central{
     min-height: 90vh;
     background: var(--color-neutral-20);
