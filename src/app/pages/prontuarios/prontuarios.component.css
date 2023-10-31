@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  width: 100%;
+}
+
+header{
+  z-index: 1;
+}
+
+.prontuarios{
+  background: var(--color-neutral-20);
+  width: 100%;
+}

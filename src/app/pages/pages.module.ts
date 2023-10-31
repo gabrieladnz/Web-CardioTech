@@ -19,6 +19,7 @@ import { NgFor } from '@angular/common';
 import { SidebarPainelModule } from '../components/sidebar-painel/sidebar-painel.module';
 import { PainelCentralComponent } from './painel-central/painel-central.component';
 import { NavbarPainelModule } from '../components/navbar-painel/navbar-painel.module';
+import { ProntuariosComponent } from './prontuarios/prontuarios.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NavbarPainelModule } from '../components/navbar-painel/navbar-painel.mo
     HomeIAComponent,
     PasswordRecoverComponent,
     PainelCentralComponent,
+    ProntuariosComponent,
   ],
   imports: [
     CommonModule,
