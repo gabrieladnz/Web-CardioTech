@@ -39,7 +39,9 @@ header{
     border-radius: 20px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     height: 221px;
+    max-height: 300px;
     margin: 5%;
+    overflow: hidden;
     width: 520px;
 }
 
@@ -49,6 +51,10 @@ header{
 
 .text-card{
     margin: 5% 0 10% 0;
+}
+
+.text-card-table{
+  margin: 5% 0 5% 0;
 }
 
 .title-card{
@@ -72,5 +78,41 @@ header{
     font-size: 35px;
 }
 
+/* PACIENTES ATENDIDOS */
+
+.table-container {
+  border: 1px solid var(--color-neutral-30);
+  border-radius: 15px;
+  padding: 20px 10px;
+  max-height: 300px;
+  overflow: auto;
+  width: 90%;
+}
+
+.table{
+  margin: 0 0 5% 0;
+}
+
+.table-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Estilização da alça (thumb) do scrollbar */
+.table-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-strong-orange-20)
+}
+
+.table-atendidos {
+  width: 85%;
+  border-collapse: collapse;
+  margin: 0 0 15% 0;
+
+}
+
+
+.check input:checked{
+  background-color: var(--color-light-orange-20);
+
+}
 
 
