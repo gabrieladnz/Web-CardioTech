@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { PagesComponent } from './pages.component';
 import { HomeComponent } from './cardiotech/home.component';
 import { LoginComponent } from './login/login.component';
 import { HomeIAComponent } from './painel IA/home-ia.component';
 import { PasswordRecoverComponent } from './password-recover/password-recover.component';
+import { SidebarPainelModule } from '../components/sidebar-painel/sidebar-painel.module';
+import { NavbarPainelModule } from '../components/navbar-painel/navbar-painel.module';
 import { PageRoutingModule } from './pages-routing-module';
 
 // import { NavbarPainelComponent } from '../components/navbar-painel/navbar-painel.component';
@@ -14,11 +18,8 @@ import { NavbarModule } from '../components/navbar/navbar.module';
 import { FooterModule } from '../components/footer/footer.module';
 
 // Angular Material
-import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
-import { SidebarPainelModule } from '../components/sidebar-painel/sidebar-painel.module';
 import { PainelCentralComponent } from './painel-central/painel-central.component';
-import { NavbarPainelModule } from '../components/navbar-painel/navbar-painel.module';
 import { ProntuariosComponent } from './prontuarios/prontuarios.component';
 
 @NgModule({
@@ -33,6 +34,8 @@ import { ProntuariosComponent } from './prontuarios/prontuarios.component';
   imports: [
     CommonModule,
     PageRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     NavbarModule,
     FooterModule,
     SidebarPainelModule,

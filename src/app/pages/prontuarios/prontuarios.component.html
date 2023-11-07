@@ -7,6 +7,316 @@
   <main class="prontuarios">
     <app-navbar-painel></app-navbar-painel>
 
-    
+    <div class="text-area">
+      <h4 class="title">Olá, Dr.<span>Fábio</span></h4>
+      <p class="subtitle">Confira os dados e históricos de exames dos seus pacientes.</p>
+    </div>
+
+    <section class="pacientes">
+      <div class="pacientes-container">
+
+        <div class="card-paciente" (click)="abrirForm()">
+          <div class="card-content">
+
+            <div class="img-area">
+
+              <img src="../../../assets/img/medico-modal.svg" alt="" class="img-paciente">
+            </div>
+
+            <div class="info-area">
+              <p class="nome">Arlindo Nemesio da Silva</p>
+              <p class="data-nascimento">20/10/1985</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-register" (click)="abrirFormCadastro()">
+          <div class="card-content">
+
+            <div class="register-img-area">
+              <span class="material-symbols-outlined icon">
+                person
+              </span>
+            </div>
+
+            <div class="info-area">
+              <p class="add-info">Adicionar novo paciente</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <ng-container class="form-area" *ngIf="showModal">
+    <div class="overlay" (click)="fecharForm()"></div>
+    <!-- [formGroup]="formPaciente" -->
+
+
+
+    <div class="modal">
+
+      <header class="navbar-form">
+        <nav class="navbar">
+
+          <div class="paciente-area">
+
+            <img src="../../../assets/img/medico-modal.svg" alt="" class="paciente-img">
+            <p class="nome-paciente">Arlindo Nemesio da Silva</p>
+          </div>
+
+          <ul class="nav-menu">
+            <li class="menu-links selected">Informações</li>
+            <li class="menu-links">Histórico</li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <form action="" class="form-paciente" [formGroup]="formPaciente">
+
+
+
+        <div class="form-container">
+
+          <!-- ==================== TITLE 1 ==================== -->
+          <div class="title-area">
+            <p class="title-form"><span class="line-1">Dados do paciente</span></p>
+          </div>
+
+          <!-- ==================== FORM CONTENT 1 ==================== -->
+          <div class="form-content">
+
+            <div class="form-row">
+              <label for="nome">Nome completo</label>
+              <input class="input-field" type="text" name="nome">
+            </div>
+
+            <div class="form-row">
+              <label for="dataNascimento">Data de nascimento</label>
+              <input class="input-field" type="text" name="dataNascimento">
+            </div>
+
+            <div class="form-row">
+              <label for="sexo">Sexo</label>
+              <input class="input-field" type="text" name="sexo">
+            </div>
+
+            <div class="form-row">
+              <label for="estadoCivil">Estado civil</label>
+              <input class="input-field" type="text" name="estadoCivil">
+            </div>
+
+            <div class="form-row">
+              <label for="cpf">CPF</label>
+              <input class="input-field" type="text" name="cpf">
+            </div>
+
+            <div class="form-row">
+              <label for="rg">RG</label>
+              <input class="input-field" type="text" name="rg">
+            </div>
+
+            <div class="form-row">
+              <label for="og">Órgão Emissor</label>
+              <input class="input-field" type="text" name="og">
+            </div>
+
+            <div class="form-row">
+              <label for="uf">UF</label>
+              <input class="input-field" type="text" name="uf">
+            </div>
+
+            <div class="form-row">
+              <label for="celular">Celular</label>
+              <input class="input-field" type="text" name="celular">
+            </div>
+
+            <div class="form-row">
+              <label for="outro-celular">Outro Celular</label>
+              <input class="input-field" type="text" name="outro-celular">
+            </div>
+          </div>
+
+          <!-- ==================== TITLE 2 ==================== -->
+          <div class="title-area">
+            <p class="title-form"><span class="line-2">Endereço</span></p>
+          </div>
+
+
+          <!-- ==================== FORM CONTENT 2 ==================== -->
+          <div class="form-content">
+
+            <div class="form-row">
+              <label for="cep">CEP</label>
+              <input class="input-field" type="text" name="cep">
+            </div>
+
+            <div class="form-row">
+              <label for="uf">Endereço</label>
+              <input class="input-field" type="text" name="uf">
+            </div>
+
+            <div class="form-row">
+              <label for="bairro">Bairro</label>
+              <input class="input-field" type="text" name="bairro">
+            </div>
+
+            <div class="form-row">
+              <label for="num">Número</label>
+              <input class="input-field" type="text" name="num">
+            </div>
+
+            <div class="form-row">
+              <label for="comp">Complemento</label>
+              <input class="input-field" type="text" name="comp">
+            </div>
+          </div>
+
+        </div>
+
+
+      </form>
+    </div>
+
+
+
+  </ng-container>
+
+
+  <ng-container class="form-area" *ngIf="formCadastro">
+    <div class="overlay" (click)="fecharForm()"></div>
+    <!-- [formGroup]="formPaciente" -->
+
+
+
+    <div class="modal">
+
+      <header class="navbar-form">
+        <nav class="navbar">
+
+          <div class="paciente-area">
+
+
+            <img src="../../../assets/icons/icon-paciente.svg" alt="" class="paciente-img">
+          </div>
+
+          <ul class="nav-menu">
+            <li class="menu-links selected">Informações</li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <form action="" class="form-paciente">
+
+
+
+        <div class="form-container">
+
+          <!-- ==================== TITLE 1 ==================== -->
+          <div class="title-area">
+            <p class="title-form"><span class="line-1">Dados do paciente</span></p>
+          </div>
+
+          <!-- ==================== FORM CONTENT 1 ==================== -->
+          <div class="form-content">
+
+            <div class="form-row">
+              <label for="nome">Nome completo</label>
+              <input class="input" type="text" name="nome">
+            </div>
+
+            <div class="form-row">
+              <label for="dataNascimento">Data de nascimento</label>
+              <input class="input-field" type="text" name="dataNascimento">
+            </div>
+
+            <div class="form-row">
+              <label for="sexo">Sexo</label>
+              <input class="input-field" type="text" name="sexo">
+            </div>
+
+            <div class="form-row">
+              <label for="estadoCivil">Estado civil</label>
+              <input class="input-field" type="text" name="estadoCivil">
+            </div>
+
+            <div class="form-row">
+              <label for="cpf">CPF</label>
+              <input class="input-field" type="text" name="cpf">
+            </div>
+
+            <div class="form-row">
+              <label for="rg">RG</label>
+              <input class="input-field" type="text" name="rg">
+            </div>
+
+            <div class="form-row">
+              <label for="og">Órgão Emissor</label>
+              <input class="input-field" type="text" name="og">
+            </div>
+
+            <div class="form-row">
+              <label for="uf">UF</label>
+              <input class="input-field" type="text" name="uf">
+            </div>
+
+            <div class="form-row">
+              <label for="celular">Celular</label>
+              <input class="input-field" type="text" name="celular">
+            </div>
+
+            <div class="form-row">
+              <label for="outro-celular">Outro Celular</label>
+              <input class="input-field" type="text" name="outro-celular">
+            </div>
+          </div>
+
+          <!-- ==================== TITLE 2 ==================== -->
+          <div class="title-area">
+            <p class="title-form"><span class="line-2">Endereço</span></p>
+          </div>
+
+
+          <!-- ==================== FORM CONTENT 2 ==================== -->
+          <div class="form-content">
+
+            <div class="form-row">
+              <label for="cep">CEP</label>
+              <input class="input-field" type="text" name="cep">
+            </div>
+
+            <div class="form-row">
+              <label for="uf">Endereço</label>
+              <input class="input-field" type="text" name="uf">
+            </div>
+
+            <div class="form-row">
+              <label for="bairro">Bairro</label>
+              <input class="input-field" type="text" name="bairro">
+            </div>
+
+            <div class="form-row">
+              <label for="num">Número</label>
+              <input class="input-field" type="text" name="num">
+            </div>
+
+            <div class="form-row">
+              <label for="comp">Complemento</label>
+              <input class="input-field" type="text" name="comp">
+            </div>
+          </div>
+
+        </div>
+
+        <button class="btn btn-salvar-paciente">Cadastrar paciente</button>
+
+
+      </form>
+    </div>
+
+
+
+  </ng-container>
 </body>

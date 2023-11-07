@@ -41,7 +41,7 @@ header{
     height: 221px;
     max-height: 300px;
     margin: 5%;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 520px;
 }
 
@@ -86,21 +86,32 @@ header{
   padding: 20px 10px;
   max-height: 300px;
   overflow: auto;
-  width: 90%;
-}
+  width: 95%;
 
-.table{
-  margin: 0 0 5% 0;
+
 }
 
 .table-container::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
-/* Estilização da alça (thumb) do scrollbar */
-.table-container::-webkit-scrollbar-thumb {
-  background-color: var(--color-strong-orange-20)
+.table-container::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
 }
+
+.table-container::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+  background-color: var(--color-light-orange-20);
+}
+.table{
+  margin: 0 0 5% 0;
+  overflow: hidden;
+}
+
+
 
 .table-atendidos {
   width: 85%;
