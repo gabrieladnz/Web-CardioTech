@@ -50,4 +50,8 @@ export class ProntuariosComponent {
     console.log("Modal cadastro aberto")
     this.formCadastro = !this.formCadastro;
   }
+
+  cadastrarPaciente(){
+    this.formCadastro = !this.formCadastro;
+  }
 }

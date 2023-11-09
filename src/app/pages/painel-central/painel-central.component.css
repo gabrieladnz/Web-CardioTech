@@ -1,3 +1,5 @@
+/*  =================== MAIN AREA  =================== */
+
 body {
   display: flex;
   width: 100%;
@@ -6,6 +8,8 @@ body {
 header{
   z-index: 1;
 }
+
+/*  =================== PAINEL AREA  =================== */
 
 .painel-central{
     min-height: 90vh;
@@ -28,10 +32,17 @@ header{
     margin: 1% 0 0 0;
 }
 
+/*  =================== CARD AREA  =================== */
 
 .cards-container{
-    display: flex;
+    /* display: grid; */
     flex-wrap: wrap;
+    /* grid-template-columns: repeat(3, 1fr); */
+    margin: 5%;
+    gap: 2rem;
+    display: flex;
+    /* margin: 4%; */
+    /* flex-wrap: wrap; */
 }
 
 .card{
@@ -40,9 +51,49 @@ header{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     height: 221px;
     max-height: 300px;
-    margin: 5%;
+    margin: 0 0 5% 0;
     /* overflow: hidden; */
-    width: 520px;
+    width: 420px;
+}
+
+.card-table{
+  background-color: var(--color-neutral-10);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 221px;
+  /* margin: 4% 1%; */
+  overflow: hidden;
+  width: 520px;
+}
+
+.card-table-faltas{
+  background-color: var(--color-neutral-10);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 353px;
+  /* margin: 4%; */
+  overflow: hidden;
+  width: 490px;
+}
+
+.card-cadastro{
+  background-color: var(--color-neutral-10);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 221px;
+  /* margin: 5% 0; */
+  overflow: hidden;
+  width: 426px;
+}
+
+.card-table-agendados{
+  background-color: var(--color-neutral-10);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 357px;
+  /* margin: 3% 4%; */
+  overflow: hidden;
+  width: 688px;
 }
 
 .card-content{
@@ -78,17 +129,16 @@ header{
     font-size: 35px;
 }
 
-/* PACIENTES ATENDIDOS */
+/*  =================== TABELA PACIENTES ATENDIDOS  =================== */
 
 .table-container {
   border: 1px solid var(--color-neutral-30);
   border-radius: 15px;
+  height: 129px;
   padding: 20px 10px;
   max-height: 300px;
-  overflow: auto;
-  width: 95%;
-
-
+  overflow-y:auto ;
+  width: 470px;
 }
 
 .table-container::-webkit-scrollbar {
@@ -96,12 +146,12 @@ header{
 }
 
 .table-container::-webkit-scrollbar-track {
-  background-color: #e4e4e4;
-  border-radius: 100px;
+  background-color: #f5f2f2;
+  border-radius: 15px;
 }
 
 .table-container::-webkit-scrollbar-thumb {
-  border-radius: 100px;
+  border-radius: 15px;
   border: 1px solid transparent;
   background-clip: content-box;
   background-color: var(--color-light-orange-20);
@@ -111,8 +161,6 @@ header{
   overflow: hidden;
 }
 
-
-
 .table-atendidos {
   width: 85%;
   border-collapse: collapse;
@@ -120,10 +168,78 @@ header{
 
 }
 
+.check-pacientes{
+  display: flex;
+  gap: .5rem;
+}
 
-.check input:checked{
-  background-color: var(--color-light-orange-20);
+input[type="checkbox"]{
+  border: 5px solid var(--color-neutral-40);
+  background: var(--color-neutral-10);
+}
 
+input[type="checkbox"]:checked {
+  background-color: var(--color-strong-orange) !important;
 }
 
 
+
+
+/*  =================== TABELA PACIENTES QUE FALTARAM  =================== */
+
+.table-container-faltas {
+  display: flex;
+  border: 1px solid var(--color-neutral-30);
+  border-radius: 15px;
+  flex-wrap: wrap;
+  height: 242px;
+  justify-content: space-between;
+  padding: 20px 10px;
+  max-height: 300px;
+  overflow-y:auto ;
+  width: 441px;
+}
+
+.table-container-faltas::-webkit-scrollbar {
+  width: 10px;
+}
+
+.table-container-faltas::-webkit-scrollbar-track {
+  background-color: #f5f2f2;
+  border-radius: 15px;
+}
+
+.table-container-faltas::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+  background-color: var(--color-light-orange-20);
+}
+
+/*  =================== TABELA PACIENTES AGENDADOS  =================== */
+
+.table-container-agendados {
+  border: 1px solid var(--color-neutral-30);
+  border-radius: 15px;
+  height: 230px;
+  padding: 20px 10px;
+  max-height: 300px;
+  overflow-y:auto ;
+  width: 585px;
+}
+
+.table-container-agendados::-webkit-scrollbar {
+  width: 10px;
+}
+
+.table-container-agendados::-webkit-scrollbar-track {
+  background-color: #f5f2f2;
+  border-radius: 15px;
+}
+
+.table-container-agendados::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+  background-color: var(--color-light-orange-20);
+}
