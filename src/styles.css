@@ -22,6 +22,7 @@
 
     /* ============ Colors feedbacks ============ */
     --color-accept: #30A308;
+    --color-hover: rgb(91, 157, 244);
     --color-light-accpet: #BEFFA7;
     --color-error: #DB0000;
     --color-light-error: #FE9696;
