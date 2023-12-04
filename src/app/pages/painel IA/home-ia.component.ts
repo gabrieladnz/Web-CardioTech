@@ -1,26 +1,35 @@
-import { Component } from '@angular/core';
-import { ModalIAComponent } from 'src/app/components/modal-ia/modal-ia.component';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home-ia',
   templateUrl: './home-ia.component.html',
-  styleUrls: ['./home-ia.component.css']
+  styleUrls: ['./home-ia.component.css'],
 })
-export class HomeIAComponent {
-
+export class HomeIAComponent implements OnInit {
   modal: boolean = false;
   showModal: boolean = false;
+  public formulario!: FormGroup;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) {}
 
+  public ngOnInit(): void {
+    this.formulario = this.formBuilder.group({
+      idade: ['', Validators.required],
+      sexo: ['', Validators.required],
+      colesterol: ['', Validators.required],
+      eletrocardiograma: ['', Validators.required],
+      frequenciaCardiacaMax: ['', Validators.required],
+      pressaoArterial: ['', Validators.required],
+      dorNoPeito: ['', Validators.required],
+    });
+  }
 
   openModal(): boolean {
-    return this.modal = true;
+    return (this.modal = true);
   }
 
   closeModal(): boolean {
-    return this.modal = false;
+    return (this.modal = false);
   }
-
-
 }

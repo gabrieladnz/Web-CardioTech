@@ -135,6 +135,11 @@ main {
   /* border-bottom: 1px solid rgb(17, 17, 17); */
 }
 
+.tr-categoria td select {
+  border: none;
+  outline: none;
+}
+
 /* =================> Botão de consulta  */
 .button-consulta {
   display: flex;

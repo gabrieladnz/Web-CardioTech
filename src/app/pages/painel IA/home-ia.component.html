@@ -1,82 +1,95 @@
-
 <body>
 
   <header class="header">
-      <app-sidebar-painel class="sidebar"></app-sidebar-painel>
+    <app-sidebar-painel class="sidebar"></app-sidebar-painel>
   </header>
 
-    <main>
+  <main>
 
-      <!-- Navbar  -->
-      <app-navbar-painel></app-navbar-painel>
+    <!-- Navbar  -->
+    <app-navbar-painel></app-navbar-painel>
 
-      <!-- Painel  -->
-      <section class="painel">
+    <!-- Painel  -->
+    <section class="painel">
 
-        <!--  Apresentação da logo e nome do médico -->
-        <div class="welcome-box">
+      <!--  Apresentação da logo e nome do médico -->
+      <div class="welcome-box">
 
-          <div class="div-logo">
-            <img class="img-logo" src="../../../assets/logos/Pulse.svg">
-            <h5>Pulse</h5>
-          </div>
-
-          <div class="txt-welcome">
-            <h4>Olá, Dr. Fábio</h4>
-            <p>Estou aqui para auxiliá-lo na análise dos casos de hoje.</p>
-          </div>
+        <div class="div-logo">
+          <img class="img-logo" src="../../../assets/logos/Pulse.svg">
+          <h5>Pulse</h5>
         </div>
 
-        <!-- Formúlario do paciente  -->
-        <div class="form-paciente">
+        <div class="txt-welcome">
+          <h4>Olá, Dr. Fábio</h4>
+          <p>Estou aqui para auxiliá-lo na análise dos casos de hoje.</p>
+        </div>
+      </div>
 
-          <div class="nome-paciente">
-            <label>Nome do paciente</label>
-            <input class="caixa-nome">
+      <!-- Formúlario do paciente  -->
+      <div class="form-paciente">
+
+        <div class="nome-paciente">
+          <label>Nome do paciente</label>
+          <input class="caixa-nome">
+        </div>
+
+        <div class="resultado-paciente">
+          <label>Insira os dados do resultado do exame do(a) paciente</label>
+        </div>
+
+        <!-- Tabela resultado dos exames  -->
+        <div class="container-tabela">
+
+          <div class="tabela">
+            <table class="tabela-exame">
+              <tr>
+                <td class="tb-categoria">Idade</td>
+                <td class="tb-categoria">Sexo</td>
+                <td class="tb-categoria">Colesterol</td>
+                <td class="tb-categoria">Eletrocardiograma</td>
+                <td class="tb-categoria">Frequência cardíaca máxima</td>
+                <td class="tb-categoria">Pressão arterial</td>
+                <td class="tb-categoria">Dor no peito</td>
+              </tr>
+
+              <tr class="tr-categoria" [formGroup]="formulario">
+                <td><input type="text" id="idadeInput" formControlName="idade" placeholder="-"></td>
+                <td>
+                  <select id="sexoInput" formControlName="sexo">
+                    <option value="F">F</option>
+                    <option value="M">M</option>
+                  </select>
+                </td>
+                <td><input type="text" id="colesterolInput" formControlName="colesterol" placeholder="-"></td>
+                <td><input type="text" id="eletrocardiogramaInput" formControlName="eletrocardiograma" placeholder="-">
+                </td>
+                <td><input type="text" id="frequenciaCardiacaMaxInput" formControlName="frequenciaCardiacaMax"
+                    placeholder="-"></td>
+                <td><input type="text" id="pressaoArterialInput" formControlName="pressaoArterial" placeholder="-"></td>
+                <td>
+                  <select id="dorNoPeito" formControlName="dorNoPeito">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
           </div>
 
-          <div class="resultado-paciente">
-            <label>Insira os dados do resultado do exame do(a) paciente</label>
-          </div>
-
-          <!-- Tabela resultado dos exames  -->
-          <div class="container-tabela">
-
-            <div class="tabela">
-              <table class="tabela-exame">
-                <tr>
-                  <td class="tb-categoria">Idade</td>
-                  <td class="tb-categoria">Sexo</td>
-                  <td class="tb-categoria">Colesterol</td>
-                  <td class="tb-categoria">Eletrocardiograma</td>
-                  <td class="tb-categoria">Frequência cardíaca máxima</td>
-                  <td class="tb-categoria">Pressão arterial</td>
-                  <td class="tb-categoria">Dor no peito</td>
-                </tr>
-
-                <tr class="tr-categoria">
-                  <td><input type="text" id="idadeInput" placeholder="-"></td>
-                  <td><input type="text" id="sexoInput" placeholder="-"></td>
-                  <td><input type="text" id="colesterolInput" placeholder="-"></td>
-                  <td><input type="text" id="eletrocardiogramaInput" placeholder="-"></td>
-                  <td><input type="text" id="frequenciaCardiacaMaxInput" placeholder="-"></td>
-                  <td><input type="text" id="pressaoArterialInput" placeholder="-"></td>
-                  <td><input type="text" id="dorNoPeitoInput" placeholder="-"></td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="button-consulta">
-              <button type="button" (click)="openModal()">Consultar diagnóstico</button>
-            </div>
-
+          <div class="button-consulta">
+            <button type="submit" (click)="openModal()">Consultar diagnóstico</button>
           </div>
 
         </div>
 
-      </section>
-    </main>
-  </body>
+      </div>
+
+    </section>
+  </main>
+</body>
 
 <!-- Modal  -->
 <ng-container class="show" *ngIf="modal">
