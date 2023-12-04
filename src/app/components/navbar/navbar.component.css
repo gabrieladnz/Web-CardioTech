@@ -31,11 +31,11 @@
 }
 
 .nav-link:hover{
-    color: var(--color-orange);
+    color: var(--color-red);
 }
 
 .nav-link:after{
-    background: var(--color-strong-orange);
+    background: var(--color-red);
     bottom: -2px;
     content: "";
     height: 3px;
@@ -53,8 +53,8 @@
 /* =================== BUTTONS =================== */
 
 .btn-signIn{
-    background: var(--color-light-orange-20);
-    color: var(--color-neutral-40);
+    background: var(--color-red);
+    color: var(--color-neutral-10);
     border-radius: 5px;
     margin: 0 6% 0 0;
     padding: 3px 18px;

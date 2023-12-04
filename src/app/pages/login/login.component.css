@@ -1,22 +1,23 @@
 /* main */
 body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  align-items: center;
+  background: #FAFAFA;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
 }
 .main-container{
     /*background-color: #f27052 ;*/
-    background-image: url(../../../assets/img/section-pulse.png);
-    padding: 45px 80px;
-    opacity: 95%;
+    /* background-image: url(../../../assets/img/section-pulse.png); */
+    /* padding: 45px 80px; */
+    /* opacity: 95%; */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
     display: flex;
 }
 body{
-    background-image: url("../../../assets/background/bg-bpm.png");
-    background-size: 70%;
+    /* background-image: url("../../../assets/background/bg-bpm.png");
+    background-size: 70%; */
 }
 .form{
     width: 450px;
@@ -24,13 +25,66 @@ body{
     margin: 0 auto;
 }
 .form-input{
-
     width:300px;
     height: 60px;
     margin: 0 auto;
     padding: 0px 1px;
     margin-bottom: 1em;
+}
 
+.form-inputs{
+  all: unset;
+  background-color: #E9E9E963;
+  color: var( --color-input);
+  border-radius: 5px;
+  height: 60px;
+  margin: 0 0 1rem 0;
+  width:300px;
+}
+
+.form-inputs:focus-visible{
+  border: 2px solid var(--color-light-orange-20);
+}
+
+
+
+.right-screen{
+  height: 654px;
+  padding: 45px 80px;
+  width: 638px;
+}
+.divisor{
+  background: var(--color-red);
+  height: 658px;
+  transform: translate(15px,);
+  width: 38px;
+}
+.left-screen{
+  background: var(--color-light-orange);
+  display: flex;
+  height: 654px;
+  padding: 45px 80px;
+  width: 638px;
+}
+.content-header{
+  display: flex;
+  margin: 50% 0;
+}
+.header-left{
+  color: var(--color-red);
+}
+
+.text-left{
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: relative;
+}
+
+.bpm-logo{
+  position: absolute;
+  transform: translate(91%, -50%);
+  width: 283px;
 }
 input{
     background-color: #E9E9E963;
@@ -42,8 +96,12 @@ input::placeholder{
     color: #cb4d30;
     padding: 5%;
 }
+input:focus-visible{
+  border-color: var(--color-light-orange-20);
+}
+
 .header {
-    color: #cb4d30;
+    color: var(--color-red);
     margin:0 auto;
     display: table;
 }
@@ -60,7 +118,7 @@ input::placeholder{
 }
 .btn-signIn{
   align-items: center;
-  background: #F27052;
+  background: var(--color-red);
   display: flex;
     margin: 0 auto;
     display: block;
@@ -74,18 +132,18 @@ input::placeholder{
     /* filter: drop-shadow(1px 3px 4px #a58465); */
 }
 .logo-cardioTech{
-    width: 40%;
-    margin: 0 auto;
+    width: 25%;
+    margin: 0 0 10% 0;
     align-self: center;
     display: flex;
 
 }
 .btn-signIn{
-    background: #F27052;
+    background: var(--color-red);
     color: white;
     border-radius: 5px;
-    margin: 0 6% 0 0;
-    padding: 3px 18px;
+    margin: 8% 6% 0 0;
+    padding: 5px 18px;
     transition: .5s ease;
     text-align: center;
 }

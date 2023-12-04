@@ -96,7 +96,7 @@ button {
   border-radius: 5px;
   height: 29.389px;
   padding: 10px 5px;
-  width: 115px;
+  width: 122px;
 }
 
 .btn-grow{
@@ -121,7 +121,7 @@ button {
   .menu-text{
     display: none;
   }
- 
+
   .active{
     align-items: center;
     height: 29.389px;

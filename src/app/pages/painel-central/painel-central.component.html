@@ -1,78 +1,195 @@
 
 
-<header>
-    <app-navbar-painel></app-navbar-painel>
-</header>
+<body>
 
-<main class="painel-central">
+  <header>
     <app-sidebar-painel></app-sidebar-painel>
-    
+  </header>
 
-    <!--  =================== WELCOME ===================  -->
-    
-    <section class="welcome">
-        <div class="welcome-container">
-    
-            <div class="text-area">
-                <h1 class="title">Seja Bem-vindo, Dr. <span>Fábio</span>!</h1>
-                <p class="subtitle">Acompanhe as consultas do dia</p>
-            </div>
-        </div>
-    </section>
-    
-    <!--  =================== CARDS ===================  -->
+  <main class="painel-central">
+    <app-navbar-painel></app-navbar-painel>
 
-    <section class="cards-section">
-        <div class="cards-container">
-            
-            <!--  =================== CARD ATENDIMENTO NO MÊS ===================  -->
-    
-            <div class="card">
+
+      <!--  =================== WELCOME ===================  -->
+
+      <section class="welcome">
+          <div class="welcome-container">
+
+              <div class="text-area">
+                  <h1 class="title">Seja Bem-vindo, Dr. <span>Fábio</span>!</h1>
+                  <p class="subtitle">Acompanhe as consultas do dia</p>
+              </div>
+          </div>
+      </section>
+
+      <!--  =================== CARDS ===================  -->
+
+      <section class="cards-section">
+          <div class="cards-container">
+
+              <!--  =================== CARD ATENDIMENTO NO MÊS ===================  -->
+
+              <div class="card">
+                  <div class="card-content">
+
+                      <div class="text-card">
+                          <h3 class="title-card">Atendimentos no mês</h3>
+                          <p class="subtitle-card">Comparação de Atendimentos entre o mês atual e o mês passado. </p>
+                      </div>
+
+                      <h2 class="card-info">
+                          <span class="card-number">23</span>
+                          <span class="card-moving material-symbols-outlined">moving</span>
+                      </h2>
+                  </div>
+              </div>
+
+              <!--  =================== CARD PACIENTES ATENDIDOS ===================  -->
+
+              <div class="card-table">
+                  <div class="card-content">
+
+                      <div class="text-card-table">
+                          <h3 class="title-card">Pacientes atendidos</h3>
+                      </div>
+
+                      <div class="table-container">
+                        <section class="table">
+                          <table class="table-atendidos">
+                            <tr class="title-table">
+                              <th>Pacientes</th>
+                            </tr>
+
+                            <tbody class="pacientes">
+                              <div class="check-pacientes">
+                                <input id="check" type="checkbox">
+                                <label class="name-paciente">Arlindo Nemesio da Silva</label>
+                              </div>
+
+                              <div class="check-pacientes">
+                                <input id="check" type="checkbox">
+                                <label class="name-paciente">Maria Clara da Silva</label>
+                              </div>
+                            </tbody>
+                          </table>
+                        </section>
+                      </div>
+
+                  </div>
+              </div>
+
+              <!--  =================== CARD PACIENTES CADASTRADOS ===================  -->
+
+              <div class="card-cadastro">
+                  <div class="card-content">
+
+                      <div class="text-card">
+                          <h3 class="title-card">Pacientes Cadastrado</h3>
+                      </div>
+
+                      <h2 class="card-info">
+                        <span class="card-number">60</span>
+                      </h2>
+                  </div>
+              </div>
+
+              <!--  =================== CARD PACIENTES QUE FALTARAM  ===================  -->
+
+              <div class="card-table-faltas">
                 <div class="card-content">
-    
-                    <div class="text-card">
-                        <h3 class="title-card">Atendimentos no mês</h3>
-                        <p class="subtitle-card">Comparação de Atendimentos entre o mês atual e o mês passado. </p>
+
+                    <div class="text-card-table">
+                        <h3 class="title-card">Faltas</h3>
                     </div>
-    
-                    <h2 class="card-info">
-                        <span class="card-number">23</span>
-                        <span class="card-moving material-symbols-outlined">moving</span>
-                    </h2>
+
+                    <div class="table-container-faltas">
+                      <section class="table">
+                        <table class="table-atendidos">
+                          <tr class="title-table">
+                            <th>Pacientes</th>
+                            <th>Horário</th>
+                            <th>Procedimento</th>
+                          </tr>
+
+                          <tbody class="pacientes">
+                            <div>oi</div>
+                          </tbody>
+
+                          <tbody class="Horario">
+                            <div>oi</div>
+                          </tbody>
+
+                          <tbody class="procedimento">
+                            <div>oi</div>
+                          </tbody>
+                        </table>
+                      </section>
+                    </div>
+
                 </div>
             </div>
-    
-            <!--  =================== CARD PACIENTES ATENDIDOS ===================  -->
 
-            <div class="card">
-                <div class="card-content">
-    
-                    <div class="text-card">
-                        <h3 class="title-card">Pacientes atendidos</h3>
-                    </div>
-    
-                    <h2 class="card-info">
-                        
-                    </h2>
-                </div>
-            </div>
+            <!--  =================== CARD PACIENTES AGENDADOS  ===================  -->
+
+            <div class="card-table-agendados">
+              <div class="card-content">
+
+                  <div class="text-card-table">
+                      <h3 class="title-card">Pacientes agendados</h3>
+                  </div>
+
+                  <div class="table-container-agendados">
+                    <section class="table">
+                      <table class="table-atendidos">
+                        <tr class="title-table">
+                          <th>Pacientes</th>
+                          <th>Horário</th>
+                          <th>Procedimento</th>
+                        </tr>
+
+                        <tbody class="pacientes">
+                          <div class="">
+
+                          </div>
+
+                          <div class="">
+
+                          </div>
+
+                          <div class="">
+
+                          </div>
+
+                          <div class="">
+
+                          </div>
+
+                          <div class="">
+
+                          </div>
+
+                          <div class="">
+
+                          </div>
+
+                          <div class="">
+
+                          </div>
+
+                        </tbody>
+                      </table>
+                    </section>
+                  </div>
+
+              </div>
+          </div>
 
 
-            <div class="card">
-                <div class="card-content">
-    
-                    <div class="text-card">
-                        <h3 class="title-card">Pacientes atendidos</h3>
-                    </div>
-    
-                    <h2 class="card-info">
-                        
-                    </h2>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-</main>
+          </div>
+      </section>
+  </main>
+
+</body>
+
 
 

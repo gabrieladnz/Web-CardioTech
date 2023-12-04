@@ -1,31 +1,60 @@
 
 .intro-container{
     display: flex;
-    margin: 5% 5%;
+    margin: 5% 0;
 }
 
 .intro-content{
-    display: flex;
+    /* display: flex; */
 }
 
 /* =================== HOME - TEXT AREA =================== */
 
 .text-area{
-    margin: 5% 0 0 0;
-    position: relative;
+    margin: 15% 10%;
+    position: absolute;
 }
 
 .title{
-    font-weight: bold;
-    margin: 0 5% 0 0;
+  color: var(--color-neutral-10);
+  /* height: 137px; */
+  font-weight: bold;
+  margin: 0 5% 0 0;
+  width: 576px;
 }
 
 .subtitle-area{
-    margin: 8% 5% 0 0;
-
+  color: var(--color-neutral-20);
+  margin: 8% 5% 0 0;
+  width: 661px;
 }
 
-.line-1:after,
+.btn-associe{
+  border: 2px var(--color-light-orange-20) solid;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--color-neutral-10);
+  font-size: 18px;
+  padding: 20px 8px;
+  text-align: center;
+  z-index: 0;
+}
+
+.btn-associe::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.btn-associe:hover{
+  color: var(--color-neutral-40);
+  transform: translateY(-5px);
+}
+
+.btn-associe:hover::before{
+  height: 180%;
+}
+
+/* .line-1:after,
 .line-2:after,
 .line-3:after{
     background: var(--color-strong-orange);
@@ -51,7 +80,7 @@
     height: 3px;
     left: 59%;
     width: 15%;
-}
+} */
 
 /* .orange-area{
     background: rgba(242, 112, 82, 0.33);
@@ -61,10 +90,14 @@
     width: 125px;
 } */
 
+.home-img{
+  position: relative;
+}
 
 .medica-img{
-    width: 625px;
-    /* height: 562; */
+  height: 552px;
+  margin: 5% 0;
+  width: 1519px;
 }
 
 
@@ -105,7 +138,7 @@
 }
 
 .icons-card{
-    color: var(--color-strong-orange);
+    color: var(--color-red);
     font-size: 45px;
     margin: 8% 5% 0;
 }
@@ -150,6 +183,9 @@
     margin: 8% 5%;
 }
 
+.img-area{
+  width: 100%;
+}
 .title-pulse{
     text-align: center;
 }
@@ -185,13 +221,25 @@
 .solutions-section{
     margin: 25% 0 0 0;
 }
-.title-solutions{
-    margin: 15% 0 0 0;
-    text-align: center;
+
+.background{
+  position: absolute;
 }
 
-.title{
-    position: relative;
+.bg-solutions{
+  margin: 5% 0 10% 0;
+  width: 100%;
+  height: 50%;
+}
+
+.title-solutions{
+  margin: 15% 0 0 0;
+  text-align: center;
+}
+
+.title-solu{
+  color: var(--color-neutral-40);
+  position: relative;
 }
 
 .line-solutions:after{
@@ -206,13 +254,13 @@
 }
 
 .solutions-points {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    align-items: center;
-    justify-content: center;
-    margin: 8% 25%;
-
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 14% 25%;
+  position: relative;
 }
 
 .solutions-1,
@@ -273,6 +321,7 @@
 .newslatter-container{
     background: var(--color-light-orange);
     height: 428px;
+    margin: 25% 0;
     position: relative;
     width: 100%;
 }
@@ -670,7 +719,7 @@
 /* @media screen and (min-width: 1024px) {
 
    /* =================== INTRO AREA =================== */
-/* 
+/*
     .line-1:after{
       bottom: 50%;
     }

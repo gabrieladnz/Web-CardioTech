@@ -1,77 +1,82 @@
-<header class="header">
-  <app-sidebar-painel class="sidebar"></app-sidebar-painel>
 
-  <body>
-    <!-- Navbar  -->
-    <app-navbar-painel></app-navbar-painel>
+<body>
 
-    <!-- Painel  -->
-    <section class="painel">
+  <header class="header">
+      <app-sidebar-painel class="sidebar"></app-sidebar-painel>
+  </header>
 
-      <!--  Apresentação da logo e nome do médico -->
-      <div class="welcome-box">
+    <main>
 
-        <div class="div-logo">
-          <img class="img-logo" src="../../../assets/logos/Pulse.svg">
-          <h5>Pulse</h5>
-        </div>
+      <!-- Navbar  -->
+      <app-navbar-painel></app-navbar-painel>
 
-        <div class="txt-welcome">
-          <h4>Olá, Dr. Fábio</h4>
-          <p>Estou aqui para auxiliá-lo na análise dos casos de hoje.</p>
-        </div>
-      </div>
+      <!-- Painel  -->
+      <section class="painel">
 
-      <!-- Formúlario do paciente  -->
-      <div class="form-paciente">
+        <!--  Apresentação da logo e nome do médico -->
+        <div class="welcome-box">
 
-        <div class="nome-paciente">
-          <label>Nome do paciente</label>
-          <input class="caixa-nome">
-        </div>
-
-        <div class="resultado-paciente">
-          <label>Insira os dados do resultado do exame do(a) paciente</label>
-        </div>
-
-        <!-- Tabela resultado dos exames  -->
-        <div class="container-tabela">
-
-          <div class="tabela">
-            <table class="tabela-exame">
-              <tr>
-                <td class="tb-categoria">Idade</td>
-                <td class="tb-categoria">Sexo</td>
-                <td class="tb-categoria">Colesterol</td>
-                <td class="tb-categoria">Eletrocardiograma</td>
-                <td class="tb-categoria">Frequência cardíaca máxima</td>
-                <td class="tb-categoria">Pressão arterial</td>
-                <td class="tb-categoria">Dor no peito</td>
-              </tr>
-
-              <tr class="tr-categoria">
-                <td>55</td>
-                <td>M</td>
-                <td>M</td>
-                <td>M</td>
-                <td>M</td>
-                <td>M</td>
-                <td>M</td>
-              </tr>
-            </table>
+          <div class="div-logo">
+            <img class="img-logo" src="../../../assets/logos/Pulse.svg">
+            <h5>Pulse</h5>
           </div>
 
-          <div class="button-consulta">
-            <button type="button" (click)="openModal()">Consultar diagnóstico</button>
+          <div class="txt-welcome">
+            <h4>Olá, Dr. Fábio</h4>
+            <p>Estou aqui para auxiliá-lo na análise dos casos de hoje.</p>
+          </div>
+        </div>
+
+        <!-- Formúlario do paciente  -->
+        <div class="form-paciente">
+
+          <div class="nome-paciente">
+            <label>Nome do paciente</label>
+            <input class="caixa-nome">
+          </div>
+
+          <div class="resultado-paciente">
+            <label>Insira os dados do resultado do exame do(a) paciente</label>
+          </div>
+
+          <!-- Tabela resultado dos exames  -->
+          <div class="container-tabela">
+
+            <div class="tabela">
+              <table class="tabela-exame">
+                <tr>
+                  <td class="tb-categoria">Idade</td>
+                  <td class="tb-categoria">Sexo</td>
+                  <td class="tb-categoria">Colesterol</td>
+                  <td class="tb-categoria">Eletrocardiograma</td>
+                  <td class="tb-categoria">Frequência cardíaca máxima</td>
+                  <td class="tb-categoria">Pressão arterial</td>
+                  <td class="tb-categoria">Dor no peito</td>
+                </tr>
+
+                <tr class="tr-categoria">
+                  <td>55</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
+                  <td>M</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="button-consulta">
+              <button type="button" (click)="openModal()">Consultar diagnóstico</button>
+            </div>
+
           </div>
 
         </div>
 
-      </div>
-
-    </section>
+      </section>
+    </main>
   </body>
-</header>
 
 <!-- Modal  -->
 <ng-container class="show" *ngIf="modal">
