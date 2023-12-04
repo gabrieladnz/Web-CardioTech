@@ -26,6 +26,7 @@ export class HomeIAComponent implements OnInit {
   }
 
   openModal(): boolean {
+    console.log('Valor form: ', this.formulario.value);
     return (this.modal = true);
   }
 
