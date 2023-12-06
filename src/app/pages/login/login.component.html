@@ -17,14 +17,14 @@
 
         <img class="logo-cardioTech" src="../../../assets/logos/CardioTech - Logo Home.svg" alt="">
         <form class="form" #formDir="ngForm">
-          <form class="form-input">
+          <form class="form-input" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
 
 
             <h5 class="header">Área do Cooperador</h5>
 
             <!--NAME-->
             <label for="CRM"></label><br>
-            <input class="form-inputs" placeholder="CRM" type="text" name="CRM" id="user" formControlName="nome">
+            <input class="form-inputs" placeholder="CRM" type="text" name="CRM" id="user" formControlName="crm">
             <!-- O (focus) é um evento de interação do usuário que é acionado quando o elemento html recebe o foco, nesse caso, quando os inputs são selecionados-->
             <!-- ----------------- NAME VALIDATION ----------------- -->
             <!-- <div *ngIf="nome.invalid && nome.touched" class="error-validation">
@@ -46,7 +46,8 @@
             </div>
             <!--<button class="btn-Entrar" id="submit-btn" type="submit">Entrar</button>-->
 
-            <br><a class="btn-signIn " routerLink="/painel-central"> Entrar </a><br>
+            <button class="btn-signIn"> Entrar</button>
+            <!-- <br><bt class="btn-signIn "> Entrar </bt><br> -->
 
           </form>
         </form>
