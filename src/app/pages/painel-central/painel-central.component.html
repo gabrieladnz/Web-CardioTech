@@ -15,9 +15,13 @@
       <section class="welcome">
           <div class="welcome-container">
 
-              <div class="text-area">
-                  <h1 class="title">Seja Bem-vindo, Dr. <span>Fábio</span>!</h1>
+              <div class="text-area" *ngIf="medico">
+                  <h1 class="title">Seja Bem-vindo, Dr. <span>{{medico}}</span>!</h1>
                   <p class="subtitle">Acompanhe as consultas do dia</p>
+              </div>
+
+              <div *ngIf="!medico">
+                <p>Não foi possível carregar as informações do médico.</p>
               </div>
           </div>
       </section>
@@ -90,7 +94,7 @@
                     </div>
                     <div>
                       <h2 class="card-info">
-                        <span class="card-number">60</span>
+                        <span class="card-number">{{this.totalPacientes}}</span>
                       </h2>
                     </div>
               </div>
@@ -149,30 +153,12 @@
                           <th>Procedimento</th>
                         </tr>
 
-                        <tbody class="pacientes">
-                          <div class="">
-
-                          </div>
-
-                          <div class="">
-
-                          </div>
-
-                          <div class="">
-
-                          </div>
-
-                          <div class="">
-
-                          </div>
-
-                          <div class="">
-
-                          </div>
-
-                          <div class="">
-
-                          </div>
+                        <tbody class="pacientes"  *ngFor="let agenda of agendamentos">
+                          <tr>
+                            <td>{{agenda.paciente || 'Erro pegar nome do paciente'}}</td>
+                            <td>{{agenda.data | date:'dd/MM/YYYY'}}</td>
+                            <td>{{agenda.motivo}}</td>
+                          </tr>
 
                         </tbody>
                       </table>

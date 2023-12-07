@@ -15,7 +15,7 @@
     <section class="pacientes">
       <div class="pacientes-container">
 
-        <div class="card-paciente" (click)="abrirForm()">
+        <div class="card-paciente" (click)="abrirForm(pacientes)" *ngFor="let pacientes of paciente">
           <div class="card-content">
 
             <div class="img-area">
@@ -24,8 +24,8 @@
             </div>
 
             <div class="info-area">
-              <p class="nome">Arlindo Nemesio da Silva</p>
-              <p class="data-nascimento">20/10/1985</p>
+              <p class="nome">{{pacientes.nomeCompleto}}</p>
+              <p class="data-nascimento">{{pacientes.dataNascimento | date:'dd/MM/YYYY'}}</p>
             </div>
           </div>
         </div>
