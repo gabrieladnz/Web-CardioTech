@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map, tap } from 'rxjs';
-import { Agendamento, Medico, Paciente, Resposta } from 'src/app/pages/shared.interface';
+import { Agendamento, Atendimento, Faltas, Medico, Paciente, Resposta } from 'src/app/pages/shared.interface';
 import { environment } from 'src/environments/environment';
 import moment from 'moment';
 
@@ -23,7 +23,7 @@ export class RequestService {
     return this.httpClient.post<Resposta>(`${API}/Medicos/login/`, body).pipe(
       tap(resposta => {
         this.salvarToken(resposta?.Token);
-        console.log('Informações do médico após login:', resposta?.Token);
+        // console.log('Informações do médico após login:', resposta);
       })
     );
   }
@@ -97,9 +97,19 @@ export class RequestService {
     return this.httpClient.get<Agendamento[]>(`${API}/Agendamentos/listarAgendamento/`)
   }
 
- mostrarAgendamentoPorId(id: number): Observable<Agendamento> {
-  return this.httpClient.get<Agendamento>(`${API}/Agendamentos/listarAgendamento/${id}`);
-}
+  mostrarAgendamentoPorId(id: number): Observable<Agendamento> {
+    return this.httpClient.get<Agendamento>(`${API}/Agendamentos/listarAgendamento/${id}`);
+  }
+
+  mostrarPacientesFaltantes(): Observable<Faltas[]> {
+    return this.httpClient.get<Faltas[]>(`${API}Agendamentos/listarPacientesFaltantes/`);
+  }
+
+  mostrarPacientesAtendidos(): Observable<Atendimento[]>{
+    return this.httpClient.get<Atendimento[]>(`${API}Agendamentos/listarPacientesAtendido/`)
+  }
+
+
 
 
 

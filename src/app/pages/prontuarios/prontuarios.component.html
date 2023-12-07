@@ -7,8 +7,8 @@
   <main class="prontuarios">
     <app-navbar-painel></app-navbar-painel>
 
-    <div class="text-area">
-      <h4 class="title">Olá, Dr.<span>Fábio</span></h4>
+    <div class="text-area" *ngFor="let md of medico ">
+      <h4 class="title">Olá, Dr.<span>{{md.nomeCompleto}}</span></h4>
       <p class="subtitle">Confira os dados e históricos de exames dos seus pacientes.</p>
     </div>
 
@@ -18,14 +18,20 @@
         <div class="card-paciente" (click)="abrirForm(pacientes)" *ngFor="let pacientes of paciente">
           <div class="card-content">
 
-            <div class="img-area">
+            <!-- <div class="img-area">
 
               <img src="../../../assets/img/medico-modal.svg" alt="" class="img-paciente">
+            </div> -->
+
+            <div class="paciente-img-area">
+              <span class="material-symbols-outlined icon">
+                person
+              </span>
             </div>
 
             <div class="info-area">
               <p class="nome">{{pacientes.nomeCompleto}}</p>
-              <p class="data-nascimento">{{pacientes.dataNascimento | date:'dd/MM/YYYY'}}</p>
+            <p class="data-nascimento">{{pacientes.dataNascimento | date:'dd/MM/YYYY'}}</p>
             </div>
           </div>
         </div>

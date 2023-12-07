@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { RequestService } from 'src/app/core/request/request.service';
-import { Paciente } from '../shared.interface';
+import { Medico, Paciente } from '../shared.interface';
 
 
 @Component({
@@ -15,6 +15,7 @@ export class ProntuariosComponent {
   formCadastro: boolean = false;
   formPaciente!: FormGroup;
   paciente: Paciente[] = [];
+  medico: Medico[] = []
 
   constructor (private formBuilder: FormBuilder, private service: RequestService) {}
 
@@ -38,6 +39,7 @@ export class ProntuariosComponent {
     });
 
     this.mostrarPacientes()
+    this.mostrarMedico()
   }
 
   mostrarPacientes(){
@@ -48,6 +50,25 @@ export class ProntuariosComponent {
       },
       (error) => {
         console.log("Não há pacientes cadastrados", error)
+      }
+    );
+  }
+
+
+  // MÉDICOS
+  mostrarMedico(){
+    this.service.pegarMedicosPorId(4).subscribe(
+      (medicos) => {
+        // Assuma que o serviço retorna um array, mas você pode ajustar conforme necessário
+        this.medico = medicos;
+        if (medicos.length > 0) {
+          console.log('Informações detalhadas do médico:', medicos);
+        } else {
+          console.error('Médico não encontrado.');
+        }
+      },
+      (error) => {
+        console.error('Erro ao obter informações detalhadas do médico:', error);
       }
     );
   }

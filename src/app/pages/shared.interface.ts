@@ -39,15 +39,29 @@ export interface Clinica {
 }
 
 export interface Agendamento {
-  filter: any;
-  sort(arg0: (a: any, b: any) => number): Agendamento[];
+  filter(arg0: () => boolean): Agendamento[];
   idAgendamento: number;
   data: Date;
   motivo: string;
+  faltou: boolean;
+  atendido: boolean;
   paciente: Paciente;
   medico: Medico;
   clinica: Clinica;
+}
 
+export interface Faltas {
+  idAgendamento: number;
+  data: Date;
+  motivo: string;
+  faltou: boolean;
+  paciente: Paciente;
+}
+
+export interface Atendimento {
+  idAgendamento: number;
+  atendido: boolean;
+  paciente: Paciente;
 }
 
 export interface Resposta {

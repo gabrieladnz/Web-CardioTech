@@ -21,6 +21,7 @@ import { FooterModule } from '../components/footer/footer.module';
 import { NgFor } from '@angular/common';
 import { PainelCentralComponent } from './painel-central/painel-central.component';
 import { ProntuariosComponent } from './prontuarios/prontuarios.component';
+import { MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ProntuariosComponent } from './prontuarios/prontuarios.component';
     NavbarModule,
     FooterModule,
     SidebarPainelModule,
-    NavbarPainelModule
+    NavbarPainelModule,
+    MatCheckboxModule
   ],
 })
 export class PagesModule { }

@@ -15,8 +15,8 @@
       <section class="welcome">
           <div class="welcome-container">
 
-              <div class="text-area" *ngIf="medico">
-                  <h1 class="title">Seja Bem-vindo, Dr. <span>{{medico}}</span>!</h1>
+              <div class="text-area" *ngFor="let md of medico">
+                  <h1 class="title">Seja Bem-vindo, Dr. <span>{{md.nomeCompleto}}</span>!</h1>
                   <p class="subtitle">Acompanhe as consultas do dia</p>
               </div>
 
@@ -64,16 +64,14 @@
                               <th>Pacientes</th>
                             </tr>
 
-                            <tbody class="pacientes">
-                              <div class="check-pacientes">
-                                <input id="check" type="checkbox">
-                                <label class="name-paciente">Arlindo Nemesio da Silva</label>
-                              </div>
+                            <tbody class="pacientes" *ngFor="let atendido of atendidos">
 
-                              <div class="check-pacientes">
-                                <input id="check" type="checkbox">
-                                <label class="name-paciente">Maria Clara da Silva</label>
-                              </div>
+                                <div class="check-pacientes">
+                                  <mat-checkbox  class="input-atend" value="" color="'var-color-neutral-20'"[checked]="atendido.atendido" >{{atendido.paciente}}</mat-checkbox>
+                                  <!-- <input class="input-checkbox" id="check" type="checkbox" [checked]="atendido.atendido"> -->
+                                  <!-- <label class="name-paciente">{{atendido.paciente}}</label> -->
+                                </div>
+
                             </tbody>
                           </table>
                         </section>
@@ -117,17 +115,14 @@
                             <th>Procedimento</th>
                           </tr>
 
-                          <tbody class="pacientes">
-                            <div>oi</div>
-                          </tbody>
+                          <tbody class="pacientes"  *ngFor="let falta of faltas">
+                          <tr class="info-falta">
+                            <td>{{falta.paciente || 'Erro pegar nome do paciente'}}</td>
+                            <td>{{falta.data | date:'dd/MM/YYYY'}}</td>
+                            <td>{{falta.motivo}}</td>
+                          </tr>
 
-                          <tbody class="Horario">
-                            <div>oi</div>
-                          </tbody>
-
-                          <tbody class="procedimento">
-                            <div>oi</div>
-                          </tbody>
+                        </tbody>
                         </table>
                       </section>
                     </div>

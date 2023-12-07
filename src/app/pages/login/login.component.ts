@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RequestService } from 'src/app/core/request/request.service';
 import { Medico, Resposta } from '../shared.interface';
 import { Router } from '@angular/router';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent {
   public formLogin!: FormGroup
 
 
-  constructor(private formBuilder: FormBuilder, private service: RequestService, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private service: RequestService, private router: Router, private loginService: LoginService) {
 
   }
 
@@ -32,6 +33,7 @@ export class LoginComponent {
       (login) =>{
         this.respostaLogin = login;
         this.router.navigate(['/painel-central']);
+        this.loginService.enviarInfoLogin(login)
         console.log('Login realizado!', login)
       },
       (error) => {
