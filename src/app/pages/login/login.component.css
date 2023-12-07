@@ -12,7 +12,7 @@ body{
     /* background-image: url(../../../assets/img/section-pulse.png); */
     /* padding: 45px 80px; */
     /* opacity: 95%; */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, .2);
     display: flex;
 }
 body{
@@ -62,7 +62,7 @@ body{
 .left-screen{
   background: var(--color-light-orange);
   display: flex;
-  height: 654px;
+  height: 658px;
   padding: 45px 80px;
   width: 638px;
 }
@@ -79,6 +79,7 @@ body{
   top: 0;
   bottom: 0;
   position: relative;
+  font-size: 32px;
 }
 
 .bpm-logo{

@@ -69,6 +69,15 @@ header{
   width: 60px;
 }
 
+.paciente-img-area{
+  background: var(--color-neutral-30);
+  border-radius: 50px;
+  height: 60px;
+  padding: 10px;
+ transform: translate(-15px, -15px);
+  width: 60px;
+}
+
 .icon{
   align-items: center;
   font-size: 28px;

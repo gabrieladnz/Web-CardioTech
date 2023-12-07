@@ -1,7 +1,8 @@
+import { LoginService } from './../login/login.service';
 import { Component } from '@angular/core';
 import { RequestService } from 'src/app/core/request/request.service';
 import { ActivatedRoute } from '@angular/router';
-import { Agendamento, Medico, Paciente } from '../shared.interface';
+import { Agendamento, Atendimento, Faltas, Medico, Paciente } from '../shared.interface';
 
 @Component({
   selector: 'app-painel-central',
@@ -11,25 +12,35 @@ import { Agendamento, Medico, Paciente } from '../shared.interface';
 export class PainelCentralComponent {
 
   totalPacientes: number = 0
-  agendamentos: Agendamento[] = []
+  agendamentos: Agendamento[] = [];
+  faltas: Faltas[] = []
+  atendidos: Atendimento[] = []
   idAgendamento: number = 0;
+  idMedico: number = 4;
   paciente: Paciente[] = []
-  medico: Medico | null = null;
+  medico: Medico[] = [];
   today: Date = new Date();
   mostrarApenasDoDia: boolean = false;
 
 
-  constructor ( private service: RequestService, private route: ActivatedRoute) {}
+  constructor ( private service: RequestService, private LoginService: LoginService, private route: ActivatedRoute) {}
 
   ngOnInit(){
     this.carregarTotalPacientes()
     this.listarConsultas()
     this.mostrarPacientes()
-    this.mostrarAgendamentoPorId();
-    console.log(this.mostrarPacientes())
-    console.log("oi", this.medico)
-    this.medico = this.service.obterInfoMedico();
+    this.mostrarPacientesAtendidos()
+    this.mostrarPacientesFaltantes()
+    this.mostrarMedico()
+
+
+    // this.mostrarAgendamentoPorId();
+    // console.log(this.mostrarPacientes())
+    // console.log("oi", this.medico)
+    // this.medico = this.service.obterInfoMedico();
   }
+
+  // PACIENTES
 
   carregarTotalPacientes(): void {
     this.service.listarTotalPacientes().subscribe(
@@ -43,16 +54,54 @@ export class PainelCentralComponent {
     );
   }
 
+  mostrarPacientes(){
+    this.service.pegarPacientes().subscribe(
+      (pacientes) => {
+        this.paciente = pacientes;
+        console.log("Pacientes: ", pacientes)
+      },
+      (error) => {
+        console.log("Não há pacientes cadastrados", error)
+      }
+    );
+  }
+
+  // AGENDAS
+
   listarConsultas(){
     this.service.mostrarAgendamento().subscribe(
-      (agendamento) => {
-        this.agendamentos =  agendamento;
-        console.log("Lista de Agendamentos: ", agendamento)
+      (agenda) => {
+        this.agendamentos =  agenda;
+        console.log("Lista de Agendamentos: ", agenda)
       },
       (error) => {
         console.error("Erro ao listar agendamentos", error)
       }
       );
+  }
+
+  mostrarPacientesFaltantes(){
+    this.service.mostrarPacientesFaltantes().subscribe(
+      (falta) => {
+        this.faltas = falta
+        console.log('Pacientes que faltaram a consulta marcada: ', falta)
+      },
+      (error) =>{
+        console.error('Erro ao buscar pacientes que faltaram a consulta', error)
+      }
+    )
+  }
+
+  mostrarPacientesAtendidos(){
+    this.service.mostrarPacientesAtendidos().subscribe(
+      (atendidos) => {
+        this.atendidos = atendidos
+        console.log('Pacientes que foram atendidos: ', atendidos)
+      },
+      (error) => {
+        console.error('Erro ao buscar pacientes atendidos', error)
+      }
+    )
   }
 
   mostrarAgendamentoPorId(){
@@ -82,37 +131,23 @@ export class PainelCentralComponent {
     );
   }
 
-  mostrarPacientes(){
-    this.service.pegarPacientes().subscribe(
-      (pacientes) => {
-        this.paciente = pacientes;
-        console.log("Pacientes: ", pacientes)
+  // MÉDICOS
+  mostrarMedico(){
+    this.service.pegarMedicosPorId(4).subscribe(
+      (medicos) => {
+        // Assuma que o serviço retorna um array, mas você pode ajustar conforme necessário
+        this.medico = medicos;
+        if (medicos.length > 0) {
+          console.log('Informações detalhadas do médico:', medicos);
+        } else {
+          console.error('Médico não encontrado.');
+        }
       },
       (error) => {
-        console.log("Não há pacientes cadastrados", error)
+        console.error('Erro ao obter informações detalhadas do médico:', error);
       }
     );
-
-
-
-  // mostrarMedico(){
-  //   this.service.pegarMedicosPorId(idMedico).subscribe(
-  //     (medicos: Medico[]) => {
-  //       // Assuma que o serviço retorna um array, mas você pode ajustar conforme necessário
-  //       this.medicos = medicos;
-  //       if (medicos.length > 0) {
-  //         console.log('Informações detalhadas do médico:', this.medicos[0]);
-  //       } else {
-  //         console.error('Médico não encontrado.');
-  //       }
-  //     },
-  //     (error) => {
-  //       console.error('Erro ao obter informações detalhadas do médico:', error);
-  //     }
-  //   );
-  // }
-
-
-
   }
+
+
 }

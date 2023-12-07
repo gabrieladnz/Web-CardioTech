@@ -14,8 +14,8 @@
   <div class="modal-usuario">
     <img src="../../../assets/img/medico-modal.svg">
 
-    <div class="txt-modal">
-      <p style="font-weight: 600; font-size: 12px; margin: 0;">Fábio Nunes</p>
+    <div class="txt-modal" *ngFor="let md of medico">
+      <p style="font-weight: 600; font-size: 12px; margin: 0;">{{md.nomeCompleto}}</p>
       <p style="font-size: 12px;">Cardiologista</p>
     </div>
 
@@ -24,17 +24,17 @@
     </span>
 
     <ng-container *ngIf="modal">
-      <div class="modal">     
+      <div class="modal">
 
         <span class="material-symbols-outlined">
           person
         </span>
-        
+
         <h4>Editar perfil</h4>
       </div>
 
     </ng-container>
-    
+
     <!-- <div class="div-select">
       <select class="select">
         <option></option>
