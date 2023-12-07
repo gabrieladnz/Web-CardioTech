@@ -25,6 +25,31 @@ export interface Medico {
   foto: string;
 }
 
+export interface Clinica {
+  idClinica: number;
+  nome: string;
+  endereco: string;
+  cep: string;
+  cidade: string;
+  estado: string;
+  telefone: string;
+  email: string;
+  cnpj: string;
+  medico: Medico
+}
+
+export interface Agendamento {
+  filter: any;
+  sort(arg0: (a: any, b: any) => number): Agendamento[];
+  idAgendamento: number;
+  data: Date;
+  motivo: string;
+  paciente: Paciente;
+  medico: Medico;
+  clinica: Clinica;
+
+}
+
 export interface Resposta {
   Token: string;
   Medico: Medico;

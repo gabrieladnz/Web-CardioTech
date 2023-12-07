@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map, tap } from 'rxjs';
-import { Medico, Paciente, Resposta } from 'src/app/pages/shared.interface';
+import { Agendamento, Medico, Paciente, Resposta } from 'src/app/pages/shared.interface';
 import { environment } from 'src/environments/environment';
 import moment from 'moment';
 
@@ -89,6 +89,17 @@ export class RequestService {
 
   // AGENDAMENTO
 
+  agendarConsulta(agendamento: Agendamento): Observable<Agendamento> {
+    return this.httpClient.post<Agendamento>(`${API}/Agendamentos/agendarConsulta/`, agendamento);
+  }
+
+  mostrarAgendamento(): Observable<Agendamento[]> {
+    return this.httpClient.get<Agendamento[]>(`${API}/Agendamentos/listarAgendamento/`)
+  }
+
+ mostrarAgendamentoPorId(id: number): Observable<Agendamento> {
+  return this.httpClient.get<Agendamento>(`${API}/Agendamentos/listarAgendamento/${id}`);
+}
 
 
 

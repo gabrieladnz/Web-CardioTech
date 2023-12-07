@@ -16,7 +16,7 @@
           <div class="welcome-container">
 
               <div class="text-area" *ngIf="medico">
-                  <h1 class="title">Seja Bem-vindo, Dr. <span>{{medico.nomeCompleto}}</span>!</h1>
+                  <h1 class="title">Seja Bem-vindo, Dr. <span>{{medico}}</span>!</h1>
                   <p class="subtitle">Acompanhe as consultas do dia</p>
               </div>
 
@@ -153,30 +153,12 @@
                           <th>Procedimento</th>
                         </tr>
 
-                        <tbody class="pacientes">
-                          <div class="">
-
-                          </div>
-
-                          <div class="">
-
-                          </div>
-
-                          <div class="">
-
-                          </div>
-
-                          <div class="">
-
-                          </div>
-
-                          <div class="">
-
-                          </div>
-
-                          <div class="">
-
-                          </div>
+                        <tbody class="pacientes"  *ngFor="let agenda of agendamentos">
+                          <tr>
+                            <td>{{agenda.paciente || 'Erro pegar nome do paciente'}}</td>
+                            <td>{{agenda.data | date:'dd/MM/YYYY'}}</td>
+                            <td>{{agenda.motivo}}</td>
+                          </tr>
 
                         </tbody>
                       </table>

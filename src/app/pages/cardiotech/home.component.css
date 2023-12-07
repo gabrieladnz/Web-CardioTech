@@ -18,8 +18,9 @@
 .title{
   color: var(--color-neutral-10);
   /* height: 137px; */
-  font-weight: bold;
+  font-weight: 500;
   margin: 0 5% 0 0;
+  letter-spacing: 0.69px;
   width: 576px;
 }
 
@@ -27,6 +28,7 @@
   color: var(--color-neutral-20);
   margin: 8% 5% 0 0;
   width: 661px;
+  font-size: 15px;
 }
 
 .btn-associe{
@@ -97,7 +99,7 @@
 .medica-img{
   height: 552px;
   margin: 5% 0;
-  width: 1519px;
+  width: 1518px;
 }
 
 
@@ -188,6 +190,7 @@
 }
 .title-pulse{
     text-align: center;
+    font-size: 20px;
 }
 
 .info-pulse{
@@ -200,8 +203,8 @@
 }
 
 .subtitle-pulse{
-    color: var(--color-orange);
-    font-size: 22px;
+    color: var(--color-red);
+    font-size: 32px;
     font-weight: bold;
     margin: 5%;
 }
@@ -238,10 +241,11 @@
 }
 
 .title-solu{
-  color: var(--color-neutral-40);
+  color: var(--color-red);
+  font-size: 30px;
   position: relative;
 }
-
+/*
 .line-solutions:after{
     background: var(--color-strong-orange);
     bottom: -2px;
@@ -251,7 +255,7 @@
     position: absolute;
     transition: 0.6s;
     width: 7%;
-}
+} */
 
 .solutions-points {
   align-items: center;
@@ -341,6 +345,7 @@
 
 .key-text{
     position: relative;
+    font-size: 20px;
 }
 
 
@@ -373,18 +378,19 @@
 }
 
 .line-news-2::after{
-    bottom: 56px;
-    left: 4%;
-    width: 8%;
+    bottom: 52px;
+    left: 36%;
+    width: 10%;
 }
 
 .line-news-3::after{
-    bottom: 32px;
+    bottom: 30px;
     left: 36%;
     width: 15%;
 }
 
 .line-news-4::after{
+    /* top: 1%; */
     left: 51%;
     width: 20%;
 }
@@ -690,8 +696,8 @@
 }
 
 .line-news-1::after{
-  bottom: 82%;
-  left: 6%;
+  top: 72%;
+  left: 60%;
   width: 14%;
 }
 
@@ -701,7 +707,7 @@
 }
 
 .line-news-3::after{
-  bottom: 30px;
+  bottom: 20px;
   left: 5%;
   width: 50%;
 }
@@ -716,10 +722,10 @@
 
 /* =================== RESPONSIVE AREA DESKTOP =================== */
 
-/* @media screen and (min-width: 1024px) {
+ @media screen and (min-width: 1024px) {
 
    /* =================== INTRO AREA =================== */
-/*
+
     .line-1:after{
       bottom: 50%;
     }
@@ -734,11 +740,11 @@
       bottom: 50%;
       left: 47%;
       width: 13%;
-    } */
+    }
 
  /* =================== NEWSLATTER AREA =================== */
 
- /* .line-news-1::after{
+ .line-news-1::after{
   bottom: 120%;
   width: 20%;
   }
@@ -753,8 +759,8 @@
   .line-news-4::after{
     left: 35%;
     width: 18%;
-  } */
-/* } */
+  }
+ }
 
 
 

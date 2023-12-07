@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RequestService } from 'src/app/core/request/request.service';
 import { ActivatedRoute } from '@angular/router';
-import { Medico } from '../shared.interface';
+import { Agendamento, Medico, Paciente } from '../shared.interface';
 
 @Component({
   selector: 'app-painel-central',
@@ -11,13 +11,22 @@ import { Medico } from '../shared.interface';
 export class PainelCentralComponent {
 
   totalPacientes: number = 0
+  agendamentos: Agendamento[] = []
+  idAgendamento: number = 0;
+  paciente: Paciente[] = []
   medico: Medico | null = null;
+  today: Date = new Date();
+  mostrarApenasDoDia: boolean = false;
 
 
   constructor ( private service: RequestService, private route: ActivatedRoute) {}
 
   ngOnInit(){
     this.carregarTotalPacientes()
+    this.listarConsultas()
+    this.mostrarPacientes()
+    this.mostrarAgendamentoPorId();
+    console.log(this.mostrarPacientes())
     console.log("oi", this.medico)
     this.medico = this.service.obterInfoMedico();
   }
@@ -33,6 +42,58 @@ export class PainelCentralComponent {
       }
     );
   }
+
+  listarConsultas(){
+    this.service.mostrarAgendamento().subscribe(
+      (agendamento) => {
+        this.agendamentos =  agendamento;
+        console.log("Lista de Agendamentos: ", agendamento)
+      },
+      (error) => {
+        console.error("Erro ao listar agendamentos", error)
+      }
+      );
+  }
+
+  mostrarAgendamentoPorId(){
+    this.service.mostrarAgendamentoPorId(this.idAgendamento).subscribe(
+      (agendamento) =>{
+        this.agendamentos = agendamento.filter(() => this.isSameDay(new Date(agendamento.data), this.today));
+        console.log('IdAgendamento: ', agendamento.idAgendamento)
+      },
+      (error) => {
+        console.log("Erro ao pegar Agendamento por id ", error)
+      }
+      );
+  }
+
+  // Filtra agendamento por dia
+  filtrarPorDia(): void {
+    this.mostrarApenasDoDia = true;
+    this.listarConsultas();
+  }
+
+   // Função para verificar se duas datas são do mesmo dia
+   isSameDay(date1: Date, date2: Date): boolean {
+    return (
+      date1.getFullYear() === date2.getFullYear() &&
+      date1.getMonth() === date2.getMonth() &&
+      date1.getDate() === date2.getDate()
+    );
+  }
+
+  mostrarPacientes(){
+    this.service.pegarPacientes().subscribe(
+      (pacientes) => {
+        this.paciente = pacientes;
+        console.log("Pacientes: ", pacientes)
+      },
+      (error) => {
+        console.log("Não há pacientes cadastrados", error)
+      }
+    );
+
+
 
   // mostrarMedico(){
   //   this.service.pegarMedicosPorId(idMedico).subscribe(
@@ -51,4 +112,7 @@ export class PainelCentralComponent {
   //   );
   // }
 
+
+
+  }
 }

@@ -157,9 +157,9 @@ header {
 
 .table-atendidos {
   width: 85%;
+  margin: 0 5%;
   border-collapse: collapse;
 }
-
 .check-pacientes {
   display: flex;
   gap: 0.5rem;
@@ -207,6 +207,7 @@ input[type="checkbox"]:checked {
 .procedimento {
   font-size: 12px;
 }
+
 
 /*  =================== TABELA PACIENTES AGENDADOS  =================== */
 
