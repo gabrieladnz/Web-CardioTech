@@ -10,11 +10,13 @@ export class HomeIAComponent implements OnInit {
   modal: boolean = false;
   showModal: boolean = false;
   public formulario!: FormGroup;
+  public exibirLoading = false;
 
   constructor(private formBuilder: FormBuilder) {}
 
   public ngOnInit(): void {
     this.formulario = this.formBuilder.group({
+      nome: ['', Validators.required],
       idade: ['', Validators.required],
       sexo: ['', Validators.required],
       colesterol: ['', Validators.required],
@@ -22,11 +24,25 @@ export class HomeIAComponent implements OnInit {
       frequenciaCardiacaMax: ['', Validators.required],
       pressaoArterial: ['', Validators.required],
       dorNoPeito: ['', Validators.required],
+      nivelAcucar: ['', Validators.required],
+      SLP: ['', Validators.required],
+      talassemia: ['', Validators.required]
     });
   }
 
-  openModal(): boolean {
-    return (this.modal = true);
+  /**
+   * Abre um modal contendo o diagnóstico gerado pela IA dos exames do paciente.
+   * @returns
+   */
+  public gerarDiagnostico(): boolean {
+    this.exibirLoading = true;
+    setTimeout(() => {
+      console.log('Valor form: ', this.formulario.value);
+      this.modal = true;
+      this.exibirLoading = false;
+    }, 4000);
+
+    return false;
   }
 
   closeModal(): boolean {

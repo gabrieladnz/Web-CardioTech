@@ -28,62 +28,100 @@
 
       <!-- Formúlario do paciente  -->
       <div class="form-paciente">
-
-        <div class="nome-paciente">
-          <label>Nome do paciente</label>
-          <input class="caixa-nome">
-        </div>
-
-        <div class="resultado-paciente">
-          <label>Insira os dados do resultado do exame do(a) paciente</label>
-        </div>
-
-        <!-- Tabela resultado dos exames  -->
-        <div class="container-tabela">
-
-          <div class="tabela">
-            <table class="tabela-exame">
-              <tr>
-                <td class="tb-categoria">Idade</td>
-                <td class="tb-categoria">Sexo</td>
-                <td class="tb-categoria">Colesterol</td>
-                <td class="tb-categoria">Eletrocardiograma</td>
-                <td class="tb-categoria">Frequência cardíaca máxima</td>
-                <td class="tb-categoria">Pressão arterial</td>
-                <td class="tb-categoria">Dor no peito</td>
-              </tr>
-
-              <tr class="tr-categoria" [formGroup]="formulario">
-                <td><input type="text" id="idadeInput" formControlName="idade" placeholder="-"></td>
-                <td>
-                  <select id="sexoInput" formControlName="sexo">
-                    <option value="F">F</option>
-                    <option value="M">M</option>
-                  </select>
-                </td>
-                <td><input type="text" id="colesterolInput" formControlName="colesterol" placeholder="-"></td>
-                <td><input type="text" id="eletrocardiogramaInput" formControlName="eletrocardiograma" placeholder="-">
-                </td>
-                <td><input type="text" id="frequenciaCardiacaMaxInput" formControlName="frequenciaCardiacaMax"
-                    placeholder="-"></td>
-                <td><input type="text" id="pressaoArterialInput" formControlName="pressaoArterial" placeholder="-"></td>
-                <td>
-                  <select id="dorNoPeito" formControlName="dorNoPeito">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-                </td>
-              </tr>
-            </table>
+        <form [formGroup]="formulario">
+          <div class="nome-paciente">
+            <label>Nome do paciente</label>
+            <input class="caixa-nome" id="nome" formControlName="nome">
           </div>
 
-          <div class="button-consulta">
-            <button type="submit" (click)="openModal()">Consultar diagnóstico</button>
+          <div class="resultado-paciente">
+            <label>Insira os dados do resultado do exame do(a) paciente</label>
           </div>
 
-        </div>
+
+          <!-- Loading  -->
+          <div class="loading" *ngIf="exibirLoading">
+            <div class="custom-loader"></div>
+          </div>
+
+          <!-- Tabela resultado dos exames  -->
+          <div class="container-tabela">
+
+            <div class="tabela">
+              <table class="tabela-exame">
+                <tr>
+                  <td class="tb-categoria">Idade</td>
+                  <td class="tb-categoria">Sexo</td>
+                  <td class="tb-categoria">Colesterol</td>
+                  <td class="tb-categoria">Eletrocardiograma</td>
+                  <td class="tb-categoria">Frequência cardíaca máxima</td>
+                  <td class="tb-categoria">Pressão arterial</td>
+                  <td class="tb-categoria">Dor no peito</td>
+                  <td class="tb-categoria">Nível de açúcar</td>
+                  <td class="tb-categoria">Inclinação do SLP</td>
+                  <td class="tb-categoria">Talassemia</td>
+                </tr>
+
+                <tr class="tr-categoria" [formGroup]="formulario">
+                  <td><input type="text" id="idadeInput" formControlName="idade" placeholder="-"></td>
+                  <td>
+                    <select id="sexoInput" formControlName="sexo">
+                      <option value="0">F</option>
+                      <option value="1">M</option>
+                    </select>
+                  </td>
+                  <td><input type="text" id="colesterolInput" formControlName="colesterol" placeholder="-"></td>
+                  <td>
+                    <select id="eletrocardiograma" formControlName="eletrocardiograma">
+                      <option value="0">Normal</option>
+                      <option value="1">Anormalidade da onda ST-T</option>
+                      <option value="2">Hipertrofia Ventricular Esquerda (HVE)</option>
+                    </select>
+                  </td>
+                  <td><input type="text" id="frequenciaCardiacaMaxInput" formControlName="frequenciaCardiacaMax"
+                      placeholder="-"></td>
+                  <td><input type="text" id="pressaoArterialInput" formControlName="pressaoArterial" placeholder="-">
+                  </td>
+                  <td>
+                    <select id="dorNoPeito" formControlName="dorNoPeito">
+                      <option value="0">Dor típica de Angina</option>
+                      <option value="1">Dor atípica de Angina</option>
+                      <option value="2">Dor não Anginosa</option>
+                      <option value="3">Assintomático</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select id="nivelAcucar" formControlName="nivelAcucar">
+                      <option value="0">Menor que 120mg/dL</option>
+                      <option value="1">Maior que 120mg/dL</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select id="SLP" formControlName="SLP">
+                      <option value="0">Descedente</option>
+                      <option value="1">Plano</option>
+                      <option value="2">Ascendente</option>
+
+                    </select>
+                  </td>
+                  <td>
+                    <select id="talassemia" formControlName="talassemia">
+                      <option value="0">Normal</option>
+                      <option value="1">Defeito fixo</option>
+                      <option value="2">Defeito reversível</option>
+                      <option value="3">Talassemia</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="button-consulta">
+              <button type="submit" (click)="gerarDiagnostico()">Consultar diagnóstico</button>
+            </div>
+
+          </div>
+        </form>
 
       </div>
 
@@ -91,14 +129,14 @@
   </main>
 </body>
 
-<!-- Modal  -->
 <ng-container class="show" *ngIf="modal">
+
   <div class="overlay" (click)="closeModal()"></div>
   <div class="modal">
 
     <div class="titulo">
       <img src="../../../assets/icons/pulse.svg">
-      <h5>Diagnóstico do paciente Arlindo Nemesio da Silva</h5>
+      <h5>Diagnóstico do paciente {{ formulario.get('nome')?.value }}</h5>
     </div>
 
     <div class="paragrafo">
@@ -107,14 +145,14 @@
         consultas médicas regulares para monitoramento.</p>
     </div>
 
-    <div class="cards">
+    <!-- <div class="cards">
       <div class="card card-1"></div>
       <div class="card card-2"></div>
       <div class="card card-3"></div>
-    </div>
+    </div> -->
 
     <div class="bt-salvar">
-      <button>Salvar no prontuário</button>
+      <button type="submit">Salvar no prontuário</button>
     </div>
   </div>
 </ng-container>
