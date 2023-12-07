@@ -35,6 +35,10 @@ main {
   margin-top: 1em;
 }
 
+.txt-welcome h4 {
+  font-size: 26px;
+}
+
 .welcome-box {
   padding: 2em 2em 2em 2em;
 }
@@ -99,12 +103,8 @@ main {
 .tabela {
   border-radius: 5px;
   border: 2px solid #00000014;
-
-  /* display: inline-flex; */
   margin-top: 30px;
   padding: 1em;
-
-  /* width: 77%; */
   height: 250px;
 }
 
@@ -168,7 +168,8 @@ main {
 
 .container-tabela {
   display: flex;
-  /* flex-wrap: wrap; */
+  text-align: center;
+  flex-direction: column;
 }
 
 /* @Media query */
@@ -271,6 +272,7 @@ main {
 }
 
 .titulo h5 {
+  font-size: 16px;
   margin-left: 10px;
 }
 
@@ -342,4 +344,39 @@ main {
 
 .bt-salvar button:hover::before {
   height: 180%;
+}
+
+.loading {
+  background: #000;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-loader {
+  opacity: 1;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(#f40606 0 0) bottom/100% 0% no-repeat #e4e4ed;
+  -webkit-mask: radial-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left,
+    radial-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right,
+    linear-gradient(to bottom left, #000 42%, #0000 43%) bottom left,
+    linear-gradient(to bottom right, #000 42%, #0000 43%) bottom right;
+  -webkit-mask-size: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  animation: p9 2s infinite linear;
+}
+
+@keyframes p9 {
+  90%,
+  100% {
+    background-size: 100% 100%;
+  }
 }

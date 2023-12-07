@@ -20,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     LoginModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
